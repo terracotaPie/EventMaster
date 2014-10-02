@@ -17,3 +17,11 @@
 * Phone: (647) 388-1201
 * Email: martin.petkov@mail.utoronto.ca
 * Skype: martin-petkov
+
+**Kitsunemimi**
+* Harris Fok
+* [Facebook Link](https://www.facebook.com/KarumiHakuhyou)
+* Phone: (647) 971-9819
+* Email: harris.fok@mail.utoronto.ca
+* Skype: snowykitsune
+* prefer skype or text
