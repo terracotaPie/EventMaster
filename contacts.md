@@ -25,3 +25,17 @@
 * Email: harris.fok@mail.utoronto.ca
 * Skype: snowykitsune
 * prefer skype or text
+
+**Tales Games**
+* Tales Mariano
+* [Facebook Link](https://www.facebook.com/tales.mariano.7)
+* E-mail: tales.mariano@mail.utoronto.ca
+* Skype: tales.com
+* Phone: 647-870-6440	
+* Availability:
+ * Mon: Before 3 - After 9
+ * Tue: Before 3 - After 5
+ * Wed: Before 3 - Between 4-7
+ * Thu: Between 1-4 - After 8
+ * Fri: After 1
+ * Sat, Mon: All day
