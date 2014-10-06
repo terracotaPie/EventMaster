@@ -39,3 +39,14 @@
  * Thu: Between 1-4 - After 8
  * Fri: After 1
  * Sat, Mon: All day
+
+**g2huda**
+* Huda Fouda
+* Phone: (647) 502-3960
+* Email: huda.fouda@utoronto.ca
+* Availability:
+ * Mon: between 3 and 6
+ * Tue: all day
+ * Wed: between 3 and 6
+ * Thur: after 3
+ * Fri: all day
