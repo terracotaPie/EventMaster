@@ -42,6 +42,7 @@
 
 **g2huda**
 * Huda Fouda
+* [Facebook Link](https://www.facebook.com/huda.fouda)
 * Phone: (647) 502-3960
 * Email: huda.fouda@utoronto.ca
 * Availability:
