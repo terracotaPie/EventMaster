@@ -12,7 +12,7 @@ We chose this project because it is something that can be personally useful to u
 * [persona 1] wants to be reminded when something is due so that he won't forget to do it
 * [persona 1] wants to be able to validate user-generated data against the opinions of other classmates
 * [persona 2] wants to get some kind of notifications when any information has been created or updated
-* [persona 2] need to be able to find times, due dates and tutorials for a specific lecture
+* [persona 2] wants to be able to find times, due dates and tutorials for a specific lecture
 
 ## MVP
 
