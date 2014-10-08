@@ -1,3 +1,5 @@
+***Remenber to keed it up to 150 words***
+
 **Martin Petkov**  
 I am a third year computer science specialist student, with a focus in computer systems. I'm most interested in computer networks and security, and in terms of programming I prefer backend to frontend. I was born in Bulgaria but I've been in Canada for 10 years now. Besides computers, I like fencing, archery and tennis, I play bass, and I like board games a lot more than video games.
 
