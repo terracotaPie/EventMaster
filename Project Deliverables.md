@@ -16,6 +16,8 @@ We chose this project because it is something that can be personally useful to u
 * [persona 2] wants to get option of receiving notification via email or SMS
 * [persona 2] wants to have an option to unsubscribe from the notifcation via emails or SMS sent
 * [persona 2] would like to get a reminder of the time and location of an exam room
+* [persona 2] can add an avatar beside student name 
+* [persona 2] every one should have login name and  password, to make sure only students and profs can get information
 
 ## MVP
 
