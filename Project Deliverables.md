@@ -14,6 +14,8 @@ We chose this project because it is something that can be personally useful to u
 * [persona 2] wants to get some kind of notifications when any information has been created or updated
 * [persona 2] wants to be able to find times, due dates and tutorials for a specific lecture
 * [persona 2] wants to get option of receiving notification via email or SMS
+* [persona 2] wants to have an option to unsubscribe from the notifcation via emails or SMS sent
+* [persona 2] would like to get a reminder of the time and location of an exam room
 
 ## MVP
 
