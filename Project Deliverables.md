@@ -4,6 +4,7 @@ We chose the option of making a time management tool for university students.
 We chose this project because it is something that can be personally useful to us and because it is easier to do it well since it is simpler. Several members had ideas on how to extend it and make it proactive instead of just a static calendar, so that gave us some room for creativity. Some members were against it and preferred to do the first project idea, as they found it more interesting. We asked everyone for their reasons for and against each project and eventually decided to compromise and go with what the majority of the team wanted to work on. Most members also wanted to work on a web app instead of an Android project, so the third app was not a feasible choice.
 
 ## Two Personas
+* [Hari Seldon] Hari Seldon is statistics Professor at University of Toronto. He mostly teaches 1st and 2nd year courses. Teaching Assistants are doing a really good job, thus he has a lot of free time. He has a lot of knowledge to share not only about the course's materials but also techniques on how to achieve academic success in his classes. He would love to share it, but there's no platform currently available. He thinks that info like good places to study, recommended time to be spent on certain task, common mistakes made by students is important
 
 ## User Stories
 * [persona 1] wants to be able to see all his lecture and tutorial times, as well as all due dates in one place, so that he doesn't have to check multiple websites to find this info
@@ -18,7 +19,7 @@ We chose this project because it is something that can be personally useful to u
 * [persona 2] would like to get a reminder of the time and location of an exam room
 * [persona 2] can add an avatar beside student name 
 * [persona 2] every one should have login name and  password, to make sure only students and profs can get information
-* [Hari Seldon] Hari Seldon is statistics Professor at University of Toronto. He mostly teaches 1st and 2nd year courses. Teaching Assistants are doing a really good job, thus he has a lot of free time. He has a lot of knowledge to share not only about the course's materials but also techniques on how to achieve academic success in his classes. He would love to share it, but there's no platform currently available. He thinks that info like good places to study, recommended time to be spent on certain task, common mistakes made by students is important
+
 
 ## MVP
 
