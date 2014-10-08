@@ -13,3 +13,6 @@ I used to be a piano teacher at the Ontario Conservatory of Music. I have expres
 
 **Tales Mariano**
 I am a forth year exchange computer science student, with focus in game design. I am from Brazil, and I have been studying in Uoft for one year. Outside coding, I have experience in design, animation, 3d modeling, psychology and screenplay. 
+
+**Timur Borkhodoev**
+My name is Timur, originaly from Russia. After graduating from high school in Russia, at the age of 15 moved to Canada for higher education at U of T. Enjoy weight training and jogging. At this point of life very interested in web programming, but seriously considering investing time in one of perspective system programming language like Rust. Dream of working on a cs consulting startup. Heavily into anime, manga, sci-fi tv shows, isaac asimov and rock music. Whenever there's not much to do I resort to sport programming(codeforces.com).
