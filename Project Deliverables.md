@@ -18,6 +18,7 @@ We chose this project because it is something that can be personally useful to u
 * [persona 2] would like to get a reminder of the time and location of an exam room
 * [persona 2] can add an avatar beside student name 
 * [persona 2] every one should have login name and  password, to make sure only students and profs can get information
+* [Hari Seldon] Hari Seldon is statistics Professor at University of Toronto. He mostly teaches 1st and 2nd year courses. Teaching Assistants are doing a really good job, thus he has a lot of free time. He has a lot of knowledge to share not only about the course's materials but also techniques on how to achieve academic success in his classes. He would love to share it, but there's no platform currently available. He thinks that info like good places to study, recommended time to be spent on certain task, common mistakes made by students is important
 
 ## MVP
 
