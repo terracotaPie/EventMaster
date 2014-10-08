@@ -1,6 +1,6 @@
 - We will write our User Stories ourselves
 - Use Trello board for the User Stories
-- Frontend done in Angular.js
+- Frontend done in Angular.js and Twitter Bootstrap
 - Backed most likely in Python + Django SQL
 - Scrum: leave a message on Slack every night, even if we did nothing
 - Scrum Master: Martin Petkov
@@ -9,4 +9,5 @@
   * Web app
   * Should be useful in real life
   * Checks related study rooms and labs, predicts when you should study for what
+  * Sends notifications when deadline of projects and assignments is approaching.
 - We want to meet at least once a week in real life

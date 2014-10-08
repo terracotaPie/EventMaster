@@ -4,8 +4,10 @@
 * [Facebook Link](https://www.facebook.com/terracotaPiePie)
 
 **cadz7**
-* Rakshit Shukla
-* [Facebook Link](https://www.facebook.com/rick.shukla)
+* Rakshit Shukla  
+* [Facebook Link](https://www.facebook.com/rick.shukla)  
+* Email: rick.shukla@mail.utoronto.ca  
+* Phone: 647-879-4447  
 
 **inve1**
 * Marco Monaco
