@@ -11,6 +11,10 @@ We chose this project because it is something that can be personally useful to u
 * Sam Smith
   * Sam Smith is a second year student at UofT: He needs a time management tool that integrates with this courses to remind him of upcoming deadlines.
 
+// Not sure if we should have a professor as a persona, as the tool is focussed for students.
+
+// We should change the Professor persona, as your chalange is to have a instructor who is not willing to help.
+
 ## User Stories
 * The app should provide lecture and tutorial times for every student, as well as all due dates in one place.
 * Jane wants to be able to add custom times and due dates in case her professors do not post these times online.
