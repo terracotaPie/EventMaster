@@ -28,8 +28,8 @@ We chose this project because it is something that can be personally useful to u
 * [2] The app should have individual (colour-coded) courses which store data in their respective data structures (organization)
 * [2] Students should be able to bring up a list of courses and add them to their own courses; automatically adds lecture times and due dates if available
 * [3] Possibly implement a mark estimation; students could input marks they've received on submitted assignments and calculate their current mark in a course. Also, could estimate mark required to achieve a certain final goal.
-* [3] Students could include a percentage weight for all assignments and tests to help prioritize their time
-* [3] Students and professors could include links to online course syllabuses attached to courses for the convenience of others
+* [3] Users could include a percentage weight for all assignments and tests to help prioritize their time
+* [3] Users could include links to online course syllabuses attached to courses for the convenience of others
 
 
 ## MVP
