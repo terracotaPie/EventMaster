@@ -13,7 +13,7 @@ We chose this project because it is something that can be personally useful to u
 Priority: in []; 1 - High, 2 - Medium, 3 - Low, same as the handout
 Difficulty: in {}; E - Easy, M - Medium, X - Xtreme
 
-* [1]{M} The app should provide lecture and tutorial times for every student, as well as all due dates in one place.
+* [1]{M} Sam wants to be able to see lecture times, tutorial times and all due dates in one place.
 * [1]{E} Jane wants to be able to add custom times and due dates in case her professors do not post these times online.
 * [2]{M} Jane should be able to see tips from other users, such as a list of study spots at UofT.
 * *[3]{M} Profs should be able to update assignment deadlines and exam times and the app should update and display this information to all students.
@@ -25,17 +25,36 @@ Difficulty: in {}; E - Easy, M - Medium, X - Xtreme
 * [3]{E} Jane should have an option to unsubscribe from notifications.
 * [3]{M} Sam should get reminders of the time and location of exam rooms (part of the unified notification system [UNS]).
 * [3]{E} Jane should be able to edit their bios and avatar.
-* [1]{E} Sam should be able to sign up through his utoronto mail, to make sure only students can access the app.
+* [1]{E} Sam should be able to sign up through his utoronto mail, to make sure only students can access the app. (unique feature)
 * [3]{E} Jane should be able to colour code her courses
 * [1]{X} Sam should be able to bring up a list of courses and add them to his own courses; automatically adds lecture times and due dates if available (unique feature)
-* [3]{M} Possibly implement a mark estimation; students could input marks they've received on submitted assignments and calculate their current mark in a course. Also, could estimate mark required to achieve a certain final goal.
+* [3]{M} Sam wants to be able to see a mark estimation; he could input marks that he's received on submitted assignments and their respective weights, and calculate the application would current mark in a course. Also, he could estimate mark required to achieve a certain final goal.
 * [3]{E} Jane wants to be able to assign priorities and weights to assignments and exams
 * [3]{E} Sam could include links to online course syllabuses attached to courses for the convenience of others
-* *[3]{X} Professors being able to override all user-agreed dates and times
+* *[3]{X} Professors want to be able to override all user-agreed dates and times
 
 
 ## MVP
 
 ## Release & Iteration Planning
+**Which user stories are you planning to implement for your first release? That is, the features you will implement in Phase 2 (3 weeks long) of the project.**  
+We plan to implement all user stories with priorities of [1] or [2] from above.
+
+**Mention 3 user-stories/features/components that you decided to exclude from your first release, and explain why you decided to postpone implementing them.**  
+*Professors want to be able to override all user-agreed dates and times*  
+* We excluded this user story because we couldn't reach a conclusive decision on how much we want professors to be involved in our application, so we decided to leave it for later. We feel that once we've developed the project further, we'll have a better idea of whether this user story is a good idea.  
+
+*Sam should get notifications when any information has been created or updated for courses he's subscribed to (part of the unified notification system [UNS])*  
+* We decided to exclude this user story because we felt that it was too complicated for a first release, and that it fit into a bigger part of the project (the UNS). We decided to implement this later, as a useful feature on top of more important ones.  
+
+*Sam wants to be able to see a mark estimation; he could input marks that he's received on submitted assignments and their respective weights, and calculate the application would current mark in a course. Also, he could estimate mark required to achieve a certain final goal.*  
+* We felt that this was a feature that was only 'nice to have', not integral to our product. It's certainly something that would make the application more helpful, but not something that we really need to have in our first release.
+
+
+**Which user stories are you planning to implement in the first iteration? (Iteration = 1 week of work)**  
+We feel that the following user stories are the first things that need to be done before the others, so they will be implemented in the first week:  
+1. *Sam wants to be able to see lecture times, tutorial times and all due dates in one place.*  
+2. *Jane wants to be able to add custom times and due dates in case her professors do not post these times online.*  
+3. *Sam wants to be reminded by the app when something is due so that he won't forget to do it. (part of the unified notification system [UNS])*
 
 ## CRC Cards
