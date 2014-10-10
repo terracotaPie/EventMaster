@@ -21,3 +21,7 @@ My name is Timur, originally from Russia. After graduating from high school in R
 
 **Harris Fok**  
 I'm Harris, and I'm a third year computer science specialist, with focus in game design. I was born and raised here in Toronto, so I guess that makes me the most boring in that respect among the other people here. I enjoy anime, games, and music, and thus I spend most of my free time on them. I've also spent way too much time obsessing over computer hardware and whatnot but nobody seems to ever care about those so whatever. I've started programming in Grade 11, though most of my programming has been related to school work so I still feel slightly inexperienced in the field - however I'm hoping to change that in my free time once I get a better hold on proper coding practice. I do happen to have a decent amount of experience with image editing though, and to a lesser extent, video editing as well.
+
+**Marco Monaco**
+I'm a 4th year computer science specialist currently doing PEY. I enjoy system administration [doing that at my work right now], distributed systems and compilers, since I took a course about them.
+I grew up in Italy and moved to Toronto for university. When I'm not using computers I like watching baseball, photography, music and playing squash.
