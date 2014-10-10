@@ -36,6 +36,7 @@ Difficulty: in {}; E - Easy, M - Medium, X - Xtreme
 
 ## MVP
 Our app gives the user the convenience and flexibility needed to make every student’s life easier. With our Time Management Tool, all the necessary times and dates will be available in one place; saving student time by eliminating the need to screen-hop throughout the day. Each student can also gain the flexibility advantage, by customizing their calendar; in case of a missing entry.
+
 For those who have trouble remembering, our app will solve this issue for them. By sending out notifications, through e-mail and SMS, the student will not need to remember to visit the app often to check their calendar. We believe that every second saved is a win for everyone.
 
 ## Release & Iteration Planning
