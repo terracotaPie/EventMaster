@@ -61,3 +61,25 @@ We feel that the following user stories are the first things that need to be don
 3. *Sam wants to be reminded by the app when something is due so that he won't forget to do it. (part of the unified notification system [UNS])*
 
 ## CRC Cards
+
+#### User
+1.Knows username/password and knows its type(student,prof,ta,alumni)
+2.Knows his courses
+3.Knows what events he is subscribed to(event id)
+
+#### Event
+1. knows its event id,name,description,group id it belongs
+2. knows its type(regular class,assignment,study session,exam)
+3. knows its time and repetitivness
+4. knows its status(approved,not approved,official)
+
+#### Group
+1. knows its group id,name,description
+2. knows its type(course offered by university,community,club)
+3. contains all events that belong to this group
+
+#### DAO
+1. can search for users(filter them)
+2. create events,groups
+3. get id's of groups,users(search for them)
+4. get all events user is subscribed to
