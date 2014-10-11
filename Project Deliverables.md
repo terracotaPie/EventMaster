@@ -39,6 +39,9 @@ Our app gives the user the convenience and flexibility needed to make every stud
 
 For those who have trouble remembering, our app will solve this issue for them. By sending out notifications, through e-mail and SMS, the student will not need to remember to visit the app often to check their calendar. We believe that every second saved is a win for everyone.
 
+Another crucial feature is to have a system that verifies events and assigns statuses to them, so users can see how reliable data is, and possible play a role in verifying this data depending of their rights(student,TA,professor).E.g - Having the most basic voting system for students, but TAs and Professors being able to change status of the data immediately(changing status to officialy verified) voiding votes.
+
+
 ## Release & Iteration Planning
 **Which user stories are you planning to implement for your first release? That is, the features you will implement in Phase 2 (3 weeks long) of the project.**  
 We plan to implement all user stories with priorities of [1] or [2] from above.
@@ -66,12 +69,14 @@ We feel that the following user stories are the first things that need to be don
 1.Knows username/password and knows its type(student,prof,ta,alumni)
 2.Knows his courses
 3.Knows what events he is subscribed to(event id)
+4. Able to vote for specific event (upvoting, downvoting)
 
 #### Event
 1. knows its event id,name,description,group id it belongs
 2. knows its type(regular class,assignment,study session,exam)
 3. knows its time and repetitivness
 4. knows its status(approved,not approved,official)
+5. Knows its voting data
 
 #### Group
 1. knows its group id,name,description
