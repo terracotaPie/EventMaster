@@ -65,26 +65,30 @@ We feel that the following user stories are the first things that need to be don
 
 ## CRC Cards
 
-#### User
-1.Knows username/password and knows its type(student,prof,ta,alumni)
-2.Knows his courses
-3.Knows what events he is subscribed to(event id)
-4. Able to vote for specific event (upvoting, downvoting)
+User| .
+------|-----
+Knows username/password and knows its type (student,prof,ta,alumni) | Event
+Knows his courses |
+Knows what events he is subscribed to (event id) |
+Able to vote for specific event (upvoting, downvoting) |
 
-#### Event
-1. knows its event id,name,description,group id it belongs
-2. knows its type(regular class,assignment,study session,exam)
-3. knows its time and repetitivness
-4. knows its status(approved,not approved,official)
-5. Knows its voting data
+Group|.
+------|-----
+Knows its group id,name,description|Event
+Knows its type (course offered by university,community,club)|
+Contains all events that belong to this group|
 
-#### Group
-1. knows its group id,name,description
-2. knows its type(course offered by university,community,club)
-3. contains all events that belong to this group
+Event|.
+------|-----
+Knows its event id,name,description,group id it belongs|
+Knows its type (regular class,assignment,study session,exam)|
+Knows its time and repetitivness|
+Knows its status (approved,not approved,official)|
+Knows its voting data|
 
-#### DAO
-1. can search for users(filter them)
-2. create events,groups
-3. get id's of groups,users(search for them)
-4. get all events user is subscribed to
+DAO|.
+------|-----
+Can search for users (filter them)|User
+Create events,groups|Group
+Get id's of groups,users (search for them)|
+Get all events user is subscribed to|
