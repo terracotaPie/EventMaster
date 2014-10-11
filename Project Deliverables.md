@@ -39,7 +39,7 @@ Our app gives the user the convenience and flexibility needed to make every stud
 
 For those who have trouble remembering, our app will solve this issue for them. By sending out notifications, through e-mail and SMS, the student will not need to remember to visit the app often to check their calendar. We believe that every second saved is a win for everyone.
 
-Another crucial feature is to have a system that verifies events and assigns statuses to them, so users can see how reliable data is, and possible play a role in verifying this data depending of their rights(student,TA,professor).E.g - Having the most basic voting system for students, but TAs and Professors being able to change status of the data immediately(changing status to officialy verified) voiding votes.
+Another crucial feature is to have a system that verifies events and assigns statuses to them, so users can see how reliable data is, and possible play a role in verifying this data depending of their rights(student,TA,professor).E.g - Having the most basic voting system for students, but TAs and Professors will be able to change status of the data immediately(changing status to officialy verified) voiding votes.
 
 
 ## Release & Iteration Planning
