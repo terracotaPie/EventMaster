@@ -18,16 +18,16 @@ Difficulty: in {}; E - Easy, M - Medium, X - Xtreme
 * [2]{M} Jane should be able to see tips from other users, such as a list of study spots at UofT.
 * *[3]{M} Profs should be able to update assignment deadlines and exam times and the app should update and display this information to all students.
 * [1]{M} Sam wants to be reminded by the app when something is due so that he won't forget to do it. (part of the unified notification system [UNS])
-* [1]{X} Jane should be able to validate her personal data against the opinions of other classmates. (unique feature)
-* [3]{X} Sam should get notifications when any information has been created or updated for courses he's subscribed to (part of the unified notification system [UNS]).
+* [2]{X} Jane wants to be sure which events are verified and which are not.
+* [3]{X} Sam should get notifications when any information has been created or updated for courses he's subscribed to (part of the unified notification system [UNS]). 
+* [2]{M} Sam wants to specify time for his notifications. e.g. in one week, one week before deadline, hour before.
 * [1]{M} Jane wants to be able to find times, due dates and tutorials for a specific course.
 * [3]{M} Sam should have an option to receive notifications via email or SMS.
-* [3]{E} Jane should have an option to unsubscribe from notifications.
-* [3]{M} Sam should get reminders of the time and location of exam rooms (part of the unified notification system [UNS]).
+* [2]{E} Jane should have an option to unsubscribe from notifications.
+* [2]{M} Sam should get reminders of the time and location of exam rooms (part of the unified notification system [UNS]).
 * [3]{E} Jane should be able to edit their bios and avatar.
-* [1]{E} Sam should be able to sign up through his utoronto mail, to make sure only students can access the app. (unique feature)
+* [2]{E} Sam should be able to sign up through his utoronto mail, to make sure only students can access the app. (unique feature)
 * [3]{E} Jane should be able to colour code her courses
-* [1]{X} Sam should be able to bring up a list of courses and add them to his own courses; automatically adds lecture times and due dates if available (unique feature)
 * [3]{M} Sam wants to be able to see a mark estimation; he could input marks that he's received on submitted assignments and their respective weights, and calculate the application would current mark in a course. Also, he could estimate mark required to achieve a certain final goal.
 * [3]{E} Jane wants to be able to assign priorities and weights to assignments and exams
 * [3]{E} Sam could include links to online course syllabuses attached to courses for the convenience of others
