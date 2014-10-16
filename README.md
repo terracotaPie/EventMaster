@@ -18,3 +18,9 @@ Proj-Evening-Team12-repo
 
 * We should set up the backend to use SQLite for now, because it requires no extra setup from anyone who forks the repo. We can always change it to Postgres or MySQL or something later on, without much trouble.
 * The backend should use Flask, since it makes things simpler for our purposes; the backend will just be generatin JSON objects, not full pages
+
+
+# Self-Decided Roles
+* Frontend: Rick, Tim, Tales
+* Backend: Marco, Martin
+* Both/Other: Harris, Huda
