@@ -1,3 +1,5 @@
+'use strict';
+
 /*
 Documentation for Calendar:
  http://fullcalendar.io/docs/
@@ -5,9 +7,14 @@ Documentation for Calendar:
  */
 
 angular.module('frontendApp')
-    .controller('DashboardCtrl', function ($scope) {
-        $scope.awesomeThings = [
-            'This is your calendar'
-        ];
-        $scope.eventSources = [];
-    });
+  .controller('DashboardCtrl', function ($scope) {
+    $scope.awesomeThings = [
+      'HTML5 Boilerplate',
+      'AngularJS',
+      'Karma'
+    ];
+    $scope.awesomeThings = [
+        'This is your calendar'
+    ];
+    $scope.eventSources = [];
+  });
