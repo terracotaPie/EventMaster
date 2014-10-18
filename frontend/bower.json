@@ -11,11 +11,15 @@
     "angular-sanitize": "~1.2.0",
     "angular-animate": "~1.2.0",
     "angular-touch": "~1.2.0",
-    "angular-route": "~1.2.0"
+    "angular-route": "~1.2.0",
+    "angular-ui-calendar": "latest"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.0",
     "angular-scenario": "~1.2.0"
   },
-  "appPath": "app"
+  "appPath": "app",
+  "resolutions": {
+    "jquery": "~2.x"
+  }
 }
