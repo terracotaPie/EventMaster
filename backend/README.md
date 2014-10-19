@@ -34,7 +34,7 @@ Events
 * POST /group/id/event
  - Creates an event under the specified group. Payload is
  ```json
- {"name": str(name), "description": str(description), "tags": [str(tag1), str(tag2)...], time: str(timestamp), repeat: str(repeat)}
+ {"name": str(name), "description": str(description), "tags": [str(tag1), str(tag2)...], "time": str(timestamp), "repeat": str(repeat)}
  ```
  Where timestamp is in the format that comes out of ```js
  (new Date()).toJSON();
@@ -43,7 +43,7 @@ Events
 * GET /group/id/events
   - Returns a json with all the events for this group [sorted by time?]
   ```json
-  [{"name": str(name), "description": str(description), "tags": [str(tag1), str(tag2)...], time: str(timestamp), repeat: str(repeat), "rank": int(rank)}, ...]
+  [{"name": str(name), "description": str(description), "tags": [str(tag1), str(tag2)...], "time": str(timestamp), "repeat": str(repeat), "rank": int(rank)}, ...]
   ```
 
 Other
