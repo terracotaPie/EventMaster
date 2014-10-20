@@ -46,7 +46,7 @@
 * Huda Fouda
 * [Facebook Link](https://www.facebook.com/huda.fouda)
 * Phone: (647) 502-3960
-* Email: huda.fouda@utoronto.ca
+* Email: huda.fouda@mail.utoronto.ca
 * Availability:
  * Mon: between 3 and 6
  * Tue: all day
