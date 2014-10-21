@@ -43,7 +43,8 @@ Events
  ```json
  {"name": str(name), "description": str(description), "tags": [str(tag1), str(tag2)...], "time": str(timestamp), "repeat": str(repeat)}
  ```
- Where timestamp is in the format that comes out of ```js
+ Where timestamp is in the format that comes out of
+```js
  (new Date()).toJSON();
  ```
  and repeat is in ("every day", "every week", "every month") [we might add more later?]
