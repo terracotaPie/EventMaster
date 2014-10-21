@@ -1,0 +1,5 @@
+[1]{M} Sam wants to be able to see lecture times, tutorial times and all due dates in one place.
+[1]{E} Jane wants to be able to add custom times and due dates in case her professors do not post these times online.
+[1]{M}(optional) Sam wants to be reminded by the app when something is due so that he won't forget to do it. (part of the unified notification system [UNS])
+[1]{M} Jane wants to be able to find times, due dates and tutorials for a specific course.
+[2]{E} Sam should be able to sign up through his utoronto mail, to make sure only students can access the app.
