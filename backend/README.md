@@ -1,3 +1,10 @@
+HOWTORUN
+====================
+
+pip install -r requirements.txt
+python flaskapp.py
+
+
 API
 ===================
 
