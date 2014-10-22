@@ -11,7 +11,7 @@
 
 angular.module('frontendApp')
 
-  .factory('calender', function($resource, server) {
+  .factory('calender', function($resource, $q, server) {
     /*
       Calender API methods go here.
     */

@@ -7,10 +7,11 @@
 
 angular.module('frontendApp')
 
-  .factory('group', function($resource, server) {
+  .factory('group', function($resource, $q, server) {
   	var service = {};
 
-  	service.getGroups = function(group) {
+  	service.getGroups = function() {
+  		var deferred = $q.defer();
 	    /*
 		    	Sample GET request to fetch groups
 		      return server.query().$promise
@@ -18,5 +19,8 @@ angular.module('frontendApp')
 		              $log.log(allGroups)
 		          }); 
 	      */
+	      return deferred.promise;
   	};
+
+  	return service;
   });				

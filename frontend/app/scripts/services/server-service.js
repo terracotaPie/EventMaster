@@ -1,8 +1,8 @@
 'use strict';
 
 /*
-	 Created by terracotaPie on 14-10-22.
-	 Edited by Rick on 14-10-22.
+	 Very little data received from server.
+	 Load all JSON from api URL and do data search on client side.
 */
 
 angular.module('frontendApp')
@@ -10,10 +10,6 @@ angular.module('frontendApp')
   .constant('SERVER_URL', 'http://localhost:20300') 
 
   .factory('server', function($resource, SERVER_URL) {
-    return $resource(SERVER_URL + '/groups/:id', {}, {
-      getAll: {
-        isArray: true,
-        method: 'GET'
-      }
-    });
+	    return $resource(SERVER_URL + '/groups/:id', {}, {
+	    });
   });

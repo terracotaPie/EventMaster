@@ -1,16 +1,23 @@
 'use strict';
 
 /*
-Documentation for Calendar:
- http://fullcalendar.io/docs/
- https://github.com/angular-ui/ui-calendar
+  - DashBoard controller
+  - Calls calender service
+
  */
 
 angular.module('frontendApp')
-  .controller('DashboardCtrl', function ($scope, server) {
-    server.getAll().$promise.then(function(groups) {
-      $scope.group = groups;
-    });
+  .controller('DashboardCtrl', function ($scope, group) {
+
+  /*
+      Fetching Groups from group-service.
+  */
+    group.getGroups()
+      .then( function(groups) 
+        {
+          $scope.groups = groups;
+        });
+
     $scope.uiConfig = {
       calendar:{
         height: 450,
@@ -22,5 +29,6 @@ angular.module('frontendApp')
         }
       }
     };
+
     $scope.eventSources = [];
   });
