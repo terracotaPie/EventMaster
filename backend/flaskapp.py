@@ -70,39 +70,6 @@ db_adapter = SQLAlchemyAdapter(db,  User)
 user_manager = UserManager(db_adapter, app,
         password_validator=lambda x,y: True) #lol strong passwords
 
-# The Home page is accessible to anyone
-@app.route('/')
-def home_page():
-    if current_user.is_authenticated():
-        return profile_page()
-    return render_template_string("""
-        {% extends "base.html" %}
-        {% block content %}
-        <h2>{%trans%}Home Page{%endtrans%}</h2>
-        <p> <a href="{{ url_for('user.login') }}">{%trans%}Sign in{%endtrans%}</a> or
-            <a href="{{ url_for('user.register') }}">{%trans%}Register{%endtrans%}</a></p>
-        {% endblock %}
-        """)
-
-# The Profile page requires a logged-in user
-@app.route('/profile')
-@login_required                                 # Use of @login_required decorator
-def profile_page():
-    return render_template_string("""
-        {% extends "base.html" %}
-        {% block content %}
-            <h2>{%trans%}Profile Page{%endtrans%}</h2>
-            <p> {%trans%}Hello{%endtrans%}
-                {{ current_user.username or current_user.email }},</p>
-            <p> <a href="{{ url_for('user.change_username') }}">
-                {%trans%}Change username{%endtrans%}</a></p>
-            <p> <a href="{{ url_for('user.change_password') }}">
-                {%trans%}Change password{%endtrans%}</a></p>
-            <p> <a href="{{ url_for('user.logout') }}?next={{ url_for('user.login') }}">
-                {%trans%}Sign out{%endtrans%}</a></p>
-        {% endblock %}
-        """)
-
 # Start development web server
 if __name__=='__main__':
     app.run(host='0.0.0.0', port=20300, debug=True)
