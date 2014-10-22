@@ -8,16 +8,19 @@ Documentation for Calendar:
 
 angular.module('frontendApp')
   .controller('DashboardCtrl', function ($scope, Groups) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
     Groups.getAll().$promise.then(function(groups) {
       $scope.group = groups;
     });
-    $scope.awesomeThings = [
-        'This is your calendar'
-    ];
+    $scope.uiConfig = {
+      calendar:{
+        height: 450,
+        editable: true,
+        header:{
+          left: 'month basicWeek basicDay',
+          center: 'title',
+          right: 'today prev,next'
+        }
+      }
+    };
     $scope.eventSources = [];
   });
