@@ -13,7 +13,16 @@ This document describes the endpoints for our api
 Users
 -------------
 
-TBA
+* POST /user/register
+ - Registers a user. no checks on anything right now. Response sets a cookie so it logs in after registration
+ - It's like a form post, parameters are user, password. So like ```user=loluser&password=lolpassword```
+
+* POST /user/sign-in
+ - Same thing as register, sets a cookie
+
+* GET /user/events
+ - Will return a list of events the user is subscribed to. Json line the /group/id/event one
+
 
 Groups
 ------------
@@ -29,10 +38,10 @@ Groups
  [{"id": int(id), "name": str(name), "description": str(description), "type": str(type)}, ...]
  ```
  * GET /group/id
-  - Returns a json containing all group info
-   ```json
-   {"name": str(name), "description": str(description), "type": str(type)}
-   ```
+ - Returns a json containing all group info
+ ```json
+ {"name": str(name), "description": str(description), "type": str(type)}
+ ```
 
 
 Events
@@ -49,10 +58,10 @@ Events
  ```
  and repeat is in ("every day", "every week", "every month") [we might add more later?]
 * GET /group/id/events
-  - Returns a json with all the events for this group [sorted by time?]
-  ```json
-  [{"name": str(name), "description": str(description), "tags": [str(tag1), str(tag2)...], "time": str(timestamp), "repeat": str(repeat), "rank": int(rank)}, ...]
-  ```
+ - Returns a json with all the events for this group [sorted by time?]
+ ```json
+  [{"group_id": int(gid), "name": str(name), "description": str(description), "tags": [str(tag1), str(tag2)...], "time": str(timestamp), "repeat": str(repeat), "rank": int(rank)}, ...]
+ ```
 
 Other
 -------

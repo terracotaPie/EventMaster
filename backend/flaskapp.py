@@ -1,14 +1,17 @@
 from flask import Flask, render_template_string, request
 from flask.ext.user import current_user, login_required, UserManager, SQLAlchemyAdapter
 from flask.ext.restful import Resource, Api, abort
-from models import db, User, Group
+from models import db, User, Group, Event
+import datetime
 import json
 
 class ConfigClass(object):
     SECRET_KEY = 'THIS IS AN INSECURE SECRET'
     SQLALCHEMY_DATABASE_URI = 'sqlite:///app.sqlite'
     CSRF_ENABLED = False # yeah
+    WTF_CSRF_ENABLED = False # yeah
     USER_ENABLE_EMAIL = False # Disable emails for now
+    USER_ENABLE_RETYPE_PASSWORD = False
 
 app = Flask(__name__)
 app.config.from_object(__name__+'.ConfigClass')
@@ -16,10 +19,21 @@ api = Api(app)
 db.init_app(app)
 
 JSON_DATETIME_FMT = '%Y-%m-%dT%H:%M:%S.%fZ'
+@app.before_first_request
+def initialize_database():
+    db.create_all()
 
 class GroupList(Resource):
     def get(self):
         return [g.to_JSON() for g in Group.query.all()]
+
+    def post(self):
+        ## TODO: validate fields, here or in the model costructor
+        rj = request.get_json()
+        g = Group(**rj)
+        db.session.add(g)
+        db.session.commit()
+        return {'message': 'success'}
 
 class GroupResource(Resource):
     def get(self, group_id):
@@ -29,10 +43,28 @@ class GroupResource(Resource):
         else:
             return g.to_JSON()
 
+class EventList(Resource):
+    def get(self, group_id):
+        return [e.to_JSON() for e in Group.query.get(group_id).events.all()]
+
+    def post(self, group_id):
+        g = Group.query.get(group_id)
+        rj = request.get_json()
+        rj['group_id'] = group_id
+        rj['time'] = datetime.datetime.strptime(rj['time'], JSON_DATETIME_FMT)
+        rj['tags'] = json.dumps(rj['tags'])
+        if g is None:
+            abort(404, message='Group {} not found'.format(group_id))
+        else:
+            e = Event(**rj)
+            db.session.add(e)
+            db.session.commit()
+            return {'message': 'success'}
+
+
 api.add_resource(GroupList, '/groups')
 api.add_resource(GroupResource, '/group/<int:group_id>')
-# Create all database tables
-#db.create_all()
+api.add_resource(EventList, '/group/<int:group_id>/events')
 
 db_adapter = SQLAlchemyAdapter(db,  User)
 user_manager = UserManager(db_adapter, app,
