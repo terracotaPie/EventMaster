@@ -14,6 +14,7 @@ user_group = db.Table('user_group',
     db.Column('group_id', db.Integer, db.ForeignKey('group.id'))
 )
 
+
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     active = db.Column(db.Boolean(), nullable=False, default=False)
@@ -23,6 +24,7 @@ class User(db.Model, UserMixin):
             backref=db.backref('users', lazy='dynamic'))
     groups = db.relationship('Group', secondary=user_group,
             backref=db.backref('users', lazy='dynamic'))
+
 
 class Group(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -46,6 +48,7 @@ class Group(db.Model):
                 'description': self.description,
                 'type': self.type}
 
+
 class Event(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
@@ -54,7 +57,6 @@ class Event(db.Model):
     tags = db.Column(db.Text, nullable=True)
     repeat = db.Column(db.String(50), nullable=False)
     group_id = db.Column(db.Integer, db.ForeignKey('group.id'))
-
 
     def __init__(self, name, description, time, tags, repeat, group_id):
         self.name = name

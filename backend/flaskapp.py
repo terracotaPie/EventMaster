@@ -1,16 +1,17 @@
-from flask import Flask, render_template_string, request
-from flask.ext.user import current_user, login_required, UserManager, SQLAlchemyAdapter
+from flask import Flask, request
+from flask.ext.user import login_required, UserManager, SQLAlchemyAdapter
 from flask.ext.restful import Resource, Api, abort
 from models import db, User, Group, Event
 import datetime
 import json
 
+
 class ConfigClass(object):
     SECRET_KEY = 'THIS IS AN INSECURE SECRET'
     SQLALCHEMY_DATABASE_URI = 'sqlite:///app.sqlite'
-    CSRF_ENABLED = False # yeah
-    WTF_CSRF_ENABLED = False # yeah
-    USER_ENABLE_EMAIL = False # Disable emails for now
+    CSRF_ENABLED = False  # yeah
+    WTF_CSRF_ENABLED = False  # yeah
+    USER_ENABLE_EMAIL = False  # Disable emails for now
     USER_ENABLE_RETYPE_PASSWORD = False
 
 app = Flask(__name__)
@@ -19,21 +20,25 @@ api = Api(app)
 db.init_app(app)
 
 JSON_DATETIME_FMT = '%Y-%m-%dT%H:%M:%S.%fZ'
+
+
 @app.before_first_request
 def initialize_database():
     db.create_all()
+
 
 class GroupList(Resource):
     def get(self):
         return [g.to_JSON() for g in Group.query.all()]
 
     def post(self):
-        ## TODO: validate fields, here or in the model costructor
+        # TODO: validate fields, here or in the model costructor
         rj = request.get_json()
         g = Group(**rj)
         db.session.add(g)
         db.session.commit()
         return {'message': 'success'}
+
 
 class GroupResource(Resource):
     def get(self, group_id):
@@ -42,6 +47,7 @@ class GroupResource(Resource):
             abort(404, message='Group {} not found'.format(group_id))
         else:
             return g.to_JSON()
+
 
 class EventList(Resource):
     def get(self, group_id):
@@ -67,9 +73,10 @@ api.add_resource(GroupResource, '/group/<int:group_id>')
 api.add_resource(EventList, '/group/<int:group_id>/events')
 
 db_adapter = SQLAlchemyAdapter(db,  User)
-user_manager = UserManager(db_adapter, app,
-        password_validator=lambda x,y: True) #lol strong passwords
 
+# lol strong passwords
+user_manager = UserManager(db_adapter, app,
+                           password_validator=lambda x, y: True)
 # Start development web server
-if __name__=='__main__':
+if __name__ == '__main__':
     app.run(host='0.0.0.0', port=20300, debug=True)
