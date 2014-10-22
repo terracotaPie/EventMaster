@@ -37,7 +37,7 @@ Groups
  ```json
  [{"id": int(id), "name": str(name), "description": str(description), "type": str(type)}, ...]
  ```
- * GET /group/id
+* GET /group/id
  - Returns a json containing all group info
  ```json
  {"name": str(name), "description": str(description), "type": str(type)}
