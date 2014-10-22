@@ -7,8 +7,8 @@ Documentation for Calendar:
  */
 
 angular.module('frontendApp')
-  .controller('DashboardCtrl', function ($scope, Groups) {
-    Groups.getAll().$promise.then(function(groups) {
+  .controller('DashboardCtrl', function ($scope, server) {
+    server.getAll().$promise.then(function(groups) {
       $scope.group = groups;
     });
     $scope.uiConfig = {
