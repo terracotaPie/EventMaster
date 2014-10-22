@@ -1,9 +1,9 @@
 HOWTORUN
 ====================
-
+```sh
 pip install -r requirements.txt
 python flaskapp.py
-
+```
 
 API
 ===================
