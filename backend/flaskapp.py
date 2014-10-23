@@ -1,6 +1,7 @@
 from flask import Flask, request
 from flask.ext.user import login_required, UserManager, SQLAlchemyAdapter
 from flask.ext.restful import Resource, Api, abort
+from flask.ext.cors import CORS
 from models import db, User, Group, Event
 import datetime
 import json
@@ -13,11 +14,13 @@ class ConfigClass(object):
     WTF_CSRF_ENABLED = False  # yeah
     USER_ENABLE_EMAIL = False  # Disable emails for now
     USER_ENABLE_RETYPE_PASSWORD = False
+    CORS_HEADERS = 'Content-Type'
 
 app = Flask(__name__)
 app.config.from_object(__name__+'.ConfigClass')
 api = Api(app)
 db.init_app(app)
+cors = CORS(app)
 
 JSON_DATETIME_FMT = '%Y-%m-%dT%H:%M:%S.%fZ'
 
