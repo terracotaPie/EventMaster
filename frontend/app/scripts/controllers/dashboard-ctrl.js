@@ -7,7 +7,7 @@
  */
 
 angular.module('frontendApp')
-  .controller('DashboardCtrl', function ($scope, group) {
+  .controller('DashboardCtrl', function ($scope, $log, group) {
 
   /*
       Fetching Groups from group-service.

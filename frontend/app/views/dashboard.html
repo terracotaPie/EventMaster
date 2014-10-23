@@ -7,8 +7,7 @@ Fore more information on ui-calendar go to controller definition(script/dashboar
     <div class="col-xs-2">
         <ul class="nav nav-pills nav-stacked">
             <li class="active"><a href="#">All</a></li>
-            <li><a href="#">CSC301H1</a></li>
-            <li><a href="#">CSC309H1</a></li>
+            <li ng-repeat="group in groups"><a href="#">{{group.name}}</a></li>
         </ul>
     </div>
     <div class="col-xs-10" ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
