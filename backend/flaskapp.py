@@ -72,8 +72,8 @@ class EventList(Resource):
 
 
 api.add_resource(GroupList, '/groups')
-api.add_resource(GroupResource, '/group/<int:group_id>')
-api.add_resource(EventList, '/group/<int:group_id>/events')
+api.add_resource(GroupResource, '/groups/<int:group_id>')
+api.add_resource(EventList, '/groups/<int:group_id>/events')
 
 db_adapter = SQLAlchemyAdapter(db,  User)
 
