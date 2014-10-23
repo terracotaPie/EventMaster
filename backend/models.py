@@ -56,14 +56,17 @@ class Event(db.Model):
     time = db.Column(db.DateTime, nullable=False)
     tags = db.Column(db.Text, nullable=True)
     repeat = db.Column(db.String(50), nullable=False)
+    duration = db.Column(db.Integer, nullable=False)
     group_id = db.Column(db.Integer, db.ForeignKey('group.id'))
 
-    def __init__(self, name, description, time, tags, repeat, group_id):
+    def __init__(self, name, description, time, tags,
+                 repeat, duration, group_id):
         self.name = name
         self.description = description
         self.time = time
         self.tags = tags
         self.repeat = repeat
+        self.duration = duration
         self.group_id = group_id
 
     def __repr__(self):
@@ -75,4 +78,5 @@ class Event(db.Model):
                 'description': self.description,
                 'time': self.time.strftime(JSON_DATETIME_FMT),
                 'tags': json.loads(self.tags),
-                'repeat': self.repeat}
+                'repeat': self.repeat,
+                'duration': self.duration}

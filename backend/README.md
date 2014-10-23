@@ -27,7 +27,7 @@ Users
 Groups
 ------------
 
-* POST /group
+* POST /groups
  - Creates a group. payload should be a json like
   ```json
   {"name": str(name), "description": str(description), "type": str(type)}
@@ -37,7 +37,7 @@ Groups
  ```json
  [{"id": int(id), "name": str(name), "description": str(description), "type": str(type)}, ...]
  ```
-* GET /group/id
+* GET /groups/id
  - Returns a json containing all group info
  ```json
  {"name": str(name), "description": str(description), "type": str(type)}
@@ -47,17 +47,17 @@ Groups
 Events
 ---------
 
-* POST /group/id/event
+* POST /groups/id/event
  - Creates an event under the specified group. Payload is
  ```json
- {"name": str(name), "description": str(description), "tags": [str(tag1), str(tag2)...], "time": str(timestamp), "repeat": str(repeat)}
+ {"name": str(name), "description": str(description), "tags": [str(tag1), str(tag2)...], "time": str(timestamp), "repeat": str(repeat), "duration": int(minutes)}
  ```
  Where timestamp is in the format that comes out of
 ```js
  (new Date()).toJSON();
  ```
  and repeat is in ("every day", "every week", "every month") [we might add more later?]
-* GET /group/id/events
+* GET /groups/id/events
  - Returns a json with all the events for this group [sorted by time?]
  ```json
   [{"group_id": int(gid), "name": str(name), "description": str(description), "tags": [str(tag1), str(tag2)...], "time": str(timestamp), "repeat": str(repeat), "rank": int(rank)}, ...]
