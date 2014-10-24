@@ -30,6 +30,7 @@ module.exports = function(config) {
       'bower_components/jquery-ui/ui/jquery-ui.js',
       'bower_components/fullcalendar/fullcalendar.js',
       'bower_components/angular-ui-calendar/src/calendar.js',
+      'bower_components/angular-ui-select/dist/select.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
       'test/spec/**/*.js'
