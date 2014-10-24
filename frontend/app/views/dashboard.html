@@ -9,6 +9,20 @@ Fore more information on ui-calendar go to controller definition(script/dashboar
             <li class="active"><a href="#">All</a></li>
             <li ng-repeat="group in groups"><a href="#">{{group.name}}</a></li>
         </ul>
+        <p>Selected: {{group.selected.name}}</p>	
+        <ui-select ng-model="group.selected"
+             theme="bootstrap"
+             ng-disabled="disabled"
+             style="width: 110px;">
+		    <ui-select-match placeholder="Add Group"><div ng-click="test()">{{$select.selected.name}}</div></ui-select-match>
+		    <ui-select-choices repeat="group in groups | filter: $select.search" refresh-delay="0">
+		      <div ng-bind-html="group.name | highlight: $select.search"></div>
+		    </ui-select-choices>
+  </ui-select>
+  <p style="text-align:center; margin-top:10px">
+  <button type="button" class="btn btn-default btn-xs" ng-click="addGroup()"><span class="glyphicon glyphicon-plus"></span> Add</button>
+  </p>
+
     </div>
     <div class="col-xs-10" ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
 </div>
