@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.calendar'
+    'ui.calendar',
+    'ui.select'
   ])
   .config(function ($routeProvider) {
     $routeProvider
