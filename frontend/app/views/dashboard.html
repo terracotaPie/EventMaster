@@ -2,6 +2,11 @@
 Fore more information on ui-calendar go to controller definition(script/dashboard.js)
 -->
 
+<div class="row">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
 
 <div class="row">
     <div class="col-xs-2">
@@ -9,7 +14,7 @@ Fore more information on ui-calendar go to controller definition(script/dashboar
             <li class="active"><a href="#">All</a></li>
             <li ng-repeat="group in groups"><a href="#">{{group.name}}</a></li>
         </ul>
-        <p>Selected: {{group.selected.name}}</p>	
+        <p>Selected: {{group.selected.name}}</p>
         <ui-select ng-model="group.selected"
              theme="bootstrap"
              ng-disabled="disabled"
