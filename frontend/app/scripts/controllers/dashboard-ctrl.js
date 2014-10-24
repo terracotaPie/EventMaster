@@ -12,11 +12,21 @@ angular.module('frontendApp')
   /*
       Fetching Groups from group-service.
   */
+  $scope.group = {};
+  console.log($scope.group.selected);
     group.getGroups()
       .then( function(groups) 
         {
           $scope.groups = groups;
         });
+
+    $scope.addGroup = function() {
+      /* newGroups is populated via ngModel in the view */
+      group.setGroup($scope.newGroups)
+        .then(function(response) {
+          $log.log(response);
+        });
+    };
 
     $scope.uiConfig = {
       calendar:{
