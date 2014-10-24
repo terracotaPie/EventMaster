@@ -10,6 +10,5 @@ angular.module('frontendApp')
   .constant('SERVER_URL', 'http://pls.oggettone.com') 
 
   .factory('server', function($resource, SERVER_URL) {
-	    return $resource(SERVER_URL + '/groups/:id', {}, {
-	    });
+	    return $resource(SERVER_URL + '/groups/:id');
   });
