@@ -126,7 +126,7 @@ class SubscriptionList(Resource):
             else:
                 abort(404, message='Event {} not found'.format(rj['event_id']))
         else:
-            abort(400, message='Missing key event_id in keys {}'.format([key for key in rj.keys()]))
+            abort(400, message='Missing key event_id in keys {}'.format(rj.keys()))
 
 
 class SubscriptionListGroups(Resource):
