@@ -23,7 +23,7 @@ db.init_app(app)
 cors = CORS(app)
 
 JSON_DATETIME_FMT = '%Y-%m-%dT%H:%M:%S.%fZ'
-
+REPEAT_VALUES = ['daily','weekly','monthly']
 
 @app.before_first_request
 def initialize_database():
@@ -39,7 +39,7 @@ def json_creates(jclass):
             if required_args <= request.get_json().keys():
                 return f(*args, **kwargs)
             else:
-                abort(400, message="Json does not contain keys {}".format(required_args))
+                abort(400, message='Json does not contain keys {}'.format(required_args))
         return wrapped_f
     return wrap
 
@@ -51,10 +51,16 @@ class GroupList(Resource):
     @json_creates(Group)
     def post(self):
         rj = request.get_json()
-        g = Group(**rj)
-        db.session.add(g)
-        db.session.commit()
-        return {'message': 'success'}
+        if Group.query.filter_by(name=rj['name']) is not None:
+            abort(409, message='Group {} already exists'.format(rj['name']))
+
+        try:
+            g = Group(**rj)
+            db.session.add(g)
+            db.session.commit()
+            return {'message': 'success'}
+        except:
+            abort(400, message='Bad request: {}'.format(rj))
 
 
 class GroupResource(Resource):
@@ -68,22 +74,39 @@ class GroupResource(Resource):
 
 class EventList(Resource):
     def get(self, group_id):
-        return [e.to_JSON() for e in Group.query.get(group_id).events.all()]
+        g = Group.query.get(group_id)
+        if g is not None:
+            return [e.to_JSON() for e in g.events.all()]
+        else:
+            abort(404, message='Group {} not found'.format(group_id))
 
     @json_creates(Event)
     def post(self, group_id):
-        g = Group.query.get(group_id)
         rj = request.get_json()
+
+        if(rj['repeat'] not in REPEAT_VALUES):
+            abort(400, message='Bad repeat value: {}'.format(rj['repeat']))
+
         rj['group_id'] = group_id
-        rj['time'] = datetime.datetime.strptime(rj['time'], JSON_DATETIME_FMT)
+
+        try:
+            rj['time'] = datetime.datetime.strptime(rj['time'], JSON_DATETIME_FMT)
+        except ValueError:
+            abort(400, message='Bad time value: {}'.format(rj['time']))
+
         rj['tags'] = json.dumps(rj['tags'])
+
+        g = Group.query.get(group_id)
         if g is None:
             abort(404, message='Group {} not found'.format(group_id))
         else:
-            e = Event(**rj)
-            db.session.add(e)
-            db.session.commit()
-            return {'message': 'success'}
+            try:
+                e = Event(**rj)
+                db.session.add(e)
+                db.session.commit()
+                return {'message': 'success'}
+            except:
+                abort(400, message='Bad request: {}'.format(rj))
 
 
 class SubscriptionList(Resource):
@@ -93,9 +116,16 @@ class SubscriptionList(Resource):
 
     def post(self):
         rj = request.get_json()
-        current_user.events.append(Event.query.get(rj['event_id']))
-        db.session.commit()
-        return {'message': 'success'}
+        if 'event_id' in rj.keys():
+            e = Event.query.get(rj['event_id'])
+            if e is not None:
+                current_user.events.append(e)
+                db.session.commit()
+                return {'message': 'success'}
+            else:
+                abort(404, message='Event {} not found'.format(rj['event_id']))
+        else:
+            abort(400, message='Bad request {}'.format(rj))
 
 
 class SubscriptionListGroups(Resource):
