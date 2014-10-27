@@ -15,6 +15,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/login.css">
     <!-- endbuild -->
 
     <!-- Angular Select CSS -->
@@ -30,8 +31,9 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
+          <li><a ng-href="#/login">Login</a></li>
           <li><a ng-href="#/about">About</a></li>
-          <li class="active"><a ng-href="#/dashboard">Dashboard</a></li>
+          <li><a ng-href="#/dashboard">Dashboard</a></li>
           <li><a ng-href="#">Contact</a></li>
         </ul>
         <h3 class="text-muted">TBCalendar</h3>
@@ -83,6 +85,7 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/login-ctrl.js"></script>
         <script src="scripts/controllers/main-ctrl.js"></script>
         <script src="scripts/controllers/about-ctrl.js"></script>
         <script src="scripts/controllers/dashboard-ctrl.js"></script>
