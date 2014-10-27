@@ -51,7 +51,8 @@ class GroupList(Resource):
     @json_creates(Group)
     def post(self):
         rj = request.get_json()
-        if Group.query.filter_by(name=rj['name']) is not None:
+
+        if Group.query.filter_by(name=rj['name']).first() is not None:
             abort(409, message='Group {} already exists'.format(rj['name']))
 
         try:
@@ -59,8 +60,8 @@ class GroupList(Resource):
             db.session.add(g)
             db.session.commit()
             return {'message': 'success'}
-        except:
-            abort(400, message='Bad request: {}'.format(rj))
+        except Exception as e:
+            abort(400, message='Bad request: {}'.format(e))
 
 
 class GroupResource(Resource):
@@ -105,8 +106,8 @@ class EventList(Resource):
                 db.session.add(e)
                 db.session.commit()
                 return {'message': 'success'}
-            except:
-                abort(400, message='Bad request: {}'.format(rj))
+            except Exception as e:
+                abort(400, message='Bad data format or type: {}'.format(e))
 
 
 class SubscriptionList(Resource):
@@ -125,7 +126,7 @@ class SubscriptionList(Resource):
             else:
                 abort(404, message='Event {} not found'.format(rj['event_id']))
         else:
-            abort(400, message='Bad request {}'.format(rj))
+            abort(400, message='Missing key event_id in keys {}'.format([key for key in rj.keys()]))
 
 
 class SubscriptionListGroups(Resource):
