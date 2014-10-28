@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="center-form panel event-panel">
+        <div class="panel-body">
+          <h2 class="text-center">Create Event</h2>
+          <form method="post" ng-submit="login()" name="eventForm">
+            <div class="form-group has-feedback event-name">
+              <p class='event-options'>EVENT NAME</p>
+              <input class="form-control input-lg" type="text" name="eventName" ng-model="eventName" placeholder="Event Name" required>
+            </div>
+
+            <div class="form-group has-feedback time">
+              <p class='event-options'>START TIME</p>
+              <input class="form-control input-lg" type="text" name="startTime" ng-model="startTime" placeholder="Start Time" required>
+            </div>
+            
+            <div class="form-group has-feedback time">
+              <p class='event-options'>ENDING TIME</p>
+              <input class="form-control input-lg" type="text" name="endTime" ng-model="endTime" placeholder="Ending Time" required>
+            </div>
+            
+            <div class="form-group has-feedback">
+              <p class='event-options'>DESCRIPTION</p>
+              <textarea class="form-control input-lg" name="deskcription" ng-model="description" required></textarea>
+            </div>
+
+            <div class="form-group has-feedback event-radio-button">
+              <p class='event-options'>Repeat:</p> 
+              <input class="form-control input-lg" type="radio" name="radio" ng-model="radio"> 
+              <p class='event-options'>yes</p>
+              <input class="form-control input-lg" type="radio" name="radio" ng-model="radio" checked> 
+              <p class='event-options'>No</p>
+            </div>
+
+            <div class="form-group has-feedback event-radio-button">
+              <input class="form-control input-lg" type="checkbox" name="sun" > <p class='event-options'>Sun</p>
+              <input class="form-control input-lg" type="checkbox" name="mon" > <p class='event-options'>Mon</p>
+              <input class="form-control input-lg" type="checkbox" name="tue" > <p class='event-options'>Tue</p>
+              <input class="form-control input-lg" type="checkbox" name="wed" > <p class='event-options'>Wed</p>
+              <input class="form-control input-lg" type="checkbox" name="thur" > <p class='event-options'>Thur</p>
+              <input class="form-control input-lg" type="checkbox" name="fri" > <p class='event-options'>Fri</p>
+              <input class="form-control input-lg" type="checkbox" name="sat" > <p class='event-options'>Sat</p>
+            </div>
+
+
+            <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-lg btn-block btn-success">Create</button>
+            <br />
+          </form>
+        </div>
+    </div>
+  </div>
+</div>
