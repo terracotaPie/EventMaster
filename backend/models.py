@@ -46,7 +46,8 @@ class Group(db.Model):
         return {'id': self.id,
                 'name': self.name,
                 'description': self.description,
-                'type': self.type}
+                'type': self.type,
+                'events': [e.to_JSON() for e in self.events]}
 
 
 class Event(db.Model):
