@@ -16,6 +16,8 @@
 
             <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-lg btn-block btn-success">Log in</button>
             <br />
+
+            <div class="alert alert-danger" role="alert" ng-show="invalidUsername">Invalid Email</div>
           </form>
         </div>
     </div>
