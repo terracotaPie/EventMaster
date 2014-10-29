@@ -37,6 +37,10 @@ angular
         templateUrl: 'views/dashboard.html',
         controller: 'DashboardCtrl'
       })
+      .when('/create-event', {
+        templateUrl: 'views/create-event.html',
+        controller: 'CreateCtrl'
+      })
       .otherwise({
         redirectTo: '/login'
       });
