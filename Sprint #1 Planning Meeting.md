@@ -1,4 +1,4 @@
-**Issues for Sprint #1**
+**Issues for Sprint #1**  
 1.	Create all the database models
 2.	Create the basic login page where users can sign up or log in.
 3.	Create the dashboard/home page
