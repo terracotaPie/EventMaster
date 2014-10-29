@@ -1,13 +1,13 @@
 **Issues for Sprint #1**  
-1.	Create all the database models
-2.	Create the basic login page where users can sign up or log in.
-3.	Create the dashboard/home page
-4.	Allow user to add custom times and due dates
-5.	Define the API endpoints
-6.	Create basic templates for the web app
-7.	Make sure the models are usable and properly implemented
-8.	Design the views
-9.	Code the views
+1.	Create all the database models  
+2.	Create the basic login page where users can sign up or log in.  
+3.	Create the dashboard/home page  
+4.	Allow user to add custom times and due dates  
+5.	Define the API endpoints  
+6.	Create basic templates for the web app  
+7.	Make sure the models are usable and properly implemented  
+8.	Design the views  
+9.	Code the views  
 10.	Implement a simple search  
 
 **Other Notes**
