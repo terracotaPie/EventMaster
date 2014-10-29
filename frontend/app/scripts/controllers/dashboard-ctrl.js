@@ -13,12 +13,26 @@ angular.module('frontendApp')
       Fetching Groups from group-service.
   */
   $scope.group = {};
-  console.log($scope.group.selected);
-    group.getGroups()
-      .then( function(groups) 
-        {
-          $scope.groups = groups;
-        });
+  $scope.events = [];
+  group.getGroups()
+    .then( function(groups)
+      {
+        $scope.groups = groups;
+        for(var group in groups)
+          {
+            for(var event in groups[group].events)
+              {
+                var d = new Date(groups[group].events[event].time);
+                d.setMinutes(d.getMinutes() + groups[group].events[event].duration);
+                $scope.myCalendar.fullCalendar( 'renderEvent', {
+                  title:groups[group].events[event].name,
+                  start:groups[group].events[event].time,
+                  end: d.toJSON()
+                });
+              }
+          }
+
+      });
 
     $scope.addGroup = function() {
       /* newGroups is populated via ngModel in the view */
