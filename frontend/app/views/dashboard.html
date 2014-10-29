@@ -11,8 +11,14 @@ Fore more information on ui-calendar go to controller definition(script/dashboar
 <div class="row">
     <div class="col-xs-2">
         <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="#">All</a></li>
-            <li ng-repeat="group in groups"><a href="#">{{group.name}}</a></li>
+            <li data-ng-class='{active:isActive("All")}'>
+              <a ng-click="putAllEvents(groups);makeActive('All')">All</a>
+            </li>
+            <li ng-repeat="group in groups" data-ng-class='{active:isActive(group.name)}'>
+              <a ng-click="filter(group);makeActive(group.name)">
+                {{group.name}}
+              </a>
+            </li>
         </ul>
         <p>Selected: {{group.selected.name}}</p>
         <ui-select ng-model="group.selected"

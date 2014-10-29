@@ -14,25 +14,52 @@ angular.module('frontendApp')
   */
   $scope.group = {};
   $scope.events = [];
+  $scope.activeMenu = 'All';
   group.getGroups()
     .then( function(groups)
       {
         $scope.groups = groups;
-        for(var group in groups)
-          {
-            for(var event in groups[group].events)
-              {
-                var d = new Date(groups[group].events[event].time);
-                d.setMinutes(d.getMinutes() + groups[group].events[event].duration);
-                $scope.myCalendar.fullCalendar( 'renderEvent', {
-                  title:groups[group].events[event].name,
-                  start:groups[group].events[event].time,
-                  end: d.toJSON()
-                });
-              }
-          }
-
+        $scope.putAllEvents($scope.groups);
       });
+
+    $scope.filter = function (group) {
+      $scope.myCalendar.fullCalendar('removeEvents');
+      for(var event in group.events) {
+        var d = new Date(group.events[event].time);
+        $scope.myCalendar.fullCalendar( 'renderEvent', {
+          title:group.events[event].name,
+          start:group.events[event].time,
+          end: d.toJSON()
+        });
+      }
+    };
+
+    $scope.putAllEvents = function (groups) {
+      for(var group in groups)
+        {
+          for(var event in groups[group].events)
+            {
+              var d = new Date(groups[group].events[event].time);
+              d.setMinutes(d.getMinutes() + groups[group].events[event].duration);
+              $scope.myCalendar.fullCalendar( 'renderEvent', {
+                title:groups[group].events[event].name,
+                start:groups[group].events[event].time,
+                end: d.toJSON()
+              });
+            }
+        }
+    };
+
+    $scope.makeActive = function (content) {
+      $scope.activeMenu = content;
+    };
+
+    $scope.isActive = function (content) {
+      if(content === $scope.activeMenu) {
+        return true;
+      }
+      return false;
+    };
 
     $scope.addGroup = function() {
       /* newGroups is populated via ngModel in the view */
