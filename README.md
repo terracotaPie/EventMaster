@@ -1,6 +1,10 @@
 Proj-Evening-Team12-repo
 ========================
 
+# Phase 2:
+* [process.md](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/blob/master/Phase2/Process.md)  
+* [product.md](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/blob/master/Phase2/Product.md)
+
 # Announcements
 
 ***Next Metting Thursday 9 pm***
