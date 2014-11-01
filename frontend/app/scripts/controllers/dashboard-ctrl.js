@@ -15,6 +15,12 @@ angular.module('frontendApp')
   $scope.group = {};
   $scope.events = [];
   $scope.activeMenu = 'All';
+
+  /*
+    Store search input and results for this search
+  */
+  $scope.searchInput;
+  $scope.searchResults = [];
   group.getGroups()
     .then( function(groups)
       {
@@ -29,9 +35,11 @@ angular.module('frontendApp')
         $scope.myCalendar.fullCalendar( 'renderEvent', {
           title:group.events[event].name,
           start:group.events[event].time,
-          end: d.toJSON()
+          end: d.toJSON(),
+          description: group.events[event].description
         });
       }
+      $scope.events = $scope.myCalendar.fullCalendar('clientEvents');
     };
 
     $scope.putAllEvents = function (groups) {
@@ -44,10 +52,12 @@ angular.module('frontendApp')
               $scope.myCalendar.fullCalendar( 'renderEvent', {
                 title:groups[group].events[event].name,
                 start:groups[group].events[event].time,
-                end: d.toJSON()
+                end: d.toJSON(),
+                description: groups[group].events[event].description
               });
             }
         }
+      $scope.events = $scope.myCalendar.fullCalendar('clientEvents');
     };
 
     $scope.makeActive = function (content) {
@@ -69,6 +79,18 @@ angular.module('frontendApp')
         });
     };
 
+    $scope.search = function() {
+      $scope.searchResults = [];
+      if($scope.searchInput.length != 0) {
+        for (var event in $scope.events) {
+          if ($scope.events[event].description.indexOf($scope.searchInput) >= 0 ||
+            $scope.events[event].title.indexOf($scope.searchInput) >= 0) {
+            $scope.searchResults.push($scope.events[event]);
+          }
+        }
+      }
+    };
+    
     $scope.uiConfig = {
       calendar:{
         height: 450,
