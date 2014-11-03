@@ -19,7 +19,7 @@ angular.module('frontendApp')
   /*
     Store search input and results for this search
   */
-  $scope.searchInput;
+  $scope.searchInput = '';
   $scope.searchResults = [];
   group.getGroups()
     .then( function(groups)
@@ -81,7 +81,7 @@ angular.module('frontendApp')
 
     $scope.search = function() {
       $scope.searchResults = [];
-      if($scope.searchInput.length != 0) {
+      if($scope.searchInput.length !== 0) {
         for (var event in $scope.events) {
           if ($scope.events[event].description.indexOf($scope.searchInput) >= 0 ||
             $scope.events[event].title.indexOf($scope.searchInput) >= 0) {
@@ -90,7 +90,7 @@ angular.module('frontendApp')
         }
       }
     };
-    
+
     $scope.uiConfig = {
       calendar:{
         height: 450,
