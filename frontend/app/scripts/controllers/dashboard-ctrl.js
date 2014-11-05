@@ -94,7 +94,7 @@ angular.module('frontendApp')
     $scope.uiConfig = {
       calendar:{
         height: 450,
-        editable: true,
+        editable: false,
         header:{
           left: 'month basicWeek basicDay',
           center: 'title',
