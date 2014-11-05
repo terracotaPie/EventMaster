@@ -1,4 +1,4 @@
-Tasks to complete:
+**Tasks to complete:**
  * Add debug and error logs
  * Finish ability to add custom events
  * Implement user-entered information, unstructured data (keep it simple)
