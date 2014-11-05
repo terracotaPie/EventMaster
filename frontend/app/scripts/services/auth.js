@@ -25,15 +25,17 @@ angular.module('frontendApp')
 				$log.log(data);
         if(data.indexOf("EMPTY SHIT") > -1) {
           $log.log("success");
+          $rootScope.isLogged = true;
+          $rootScope.currentUser = data;
+          $location.path('/dashboard');
         } else {
           $log.log("fail");
+          $rootScope.isLogged = false;
         }
-		            $rootScope.currentUser = data;
-		            $location.path('/dashboard');
-		          })
+      })
 			.error(function(error) {
-	              	$log.error(error);
-	              });
+      	$log.error(error);
+      });
 	};
   	return service;
   });
