@@ -23,10 +23,10 @@ angular.module('frontendApp')
 		$http(config)
 			.success(function(data) {
 				$log.log(data);
-        if(data.indexOf("EMPTY SHIT") > -1) {
-          $log.log("success");
+        if(data.indexOf('EMPTY SHIT') > -1) {
+          $log.log('success');
         } else {
-          $log.log("fail");
+          $log.log('fail');
         }
 		            $rootScope.currentUser = data;
 		            $location.path('/dashboard');
