@@ -1,7 +1,7 @@
 <head>
 <style>
 body {
-	background-color: #f2f2f2;
+	background-color: #f8f8f8;
 	padding: 0;
 	margin: 0;
 }
@@ -21,6 +21,20 @@ header {
 	background-repeat: no-repeat;
 	background-position: center;
 }
+.feature {
+	height: 300px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.feature-text {
+	width: 500px;
+	text-align: center;
+	position: relative;
+	top: 45%;
+	transform: translateY(-50%);
+}
 </style>
 </head>
 
@@ -30,7 +44,24 @@ header {
 		<p style="float:right">links</p>
 	</header>
 	
-	<div class="main">
+	<section class="main">
 		Insert Landing page here
-	</div>
+	</section>
+	
+	<section class="center" style="padding-top: 50px">
+		<div class="feature">
+			<img style="float:left" src="feature.png" width="300" height="300">
+			<p class="feature-text" style="float:right">1<br>2<br>3</p>
+		</div>
+		
+		<div class="feature">
+			<img style="float:right" src="feature.png" width="300" height="300">
+			<p class="feature-text" style="float:left">1<br>2<br>3</p>
+		</div>
+		
+		<div class="feature">
+			<img style="float:left" src="feature.png" width="300" height="300">
+			<p class="feature-text" style="float:right">1<br>2<br>3</p>
+		</div>
+	</section>
 </body>
