@@ -23,13 +23,13 @@ angular.module('frontendApp')
         $http(config)
             .success(function(data) {
                 $log.log(data);
-        if(data.indexOf("EMPTY SHIT") > -1) {
-          $log.log("success");
+        if(data.indexOf('EMPTY SHIT') > -1) {
+          $log.log('success');
           $rootScope.isLogged = true;
           $rootScope.currentUser = data;
           $location.path('/dashboard');
         } else {
-          $log.log("fail");
+          $log.log('fail');
           $rootScope.isLogged = false;
         }
       })
