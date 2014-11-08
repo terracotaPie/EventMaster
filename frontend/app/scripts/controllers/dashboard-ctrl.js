@@ -32,10 +32,11 @@ angular.module('frontendApp')
       $scope.myCalendar.fullCalendar('removeEvents');
       for(var event in group.events) {
         var d = new Date(group.events[event].time);
+
         $scope.myCalendar.fullCalendar( 'renderEvent', {
           title:group.events[event].name,
           start:group.events[event].time,
-          color:group.events[event].color,
+          color:$scope.colors[Math.floor((Math.random() * 5) + 1)],
           end: d.toJSON(),
           description: group.events[event].description
         });
