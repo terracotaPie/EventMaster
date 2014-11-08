@@ -3,17 +3,22 @@ Fore more information on ui-calendar go to controller definition(script/dashboar
 -->
 
 <div class="row">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search" ng-model="searchInput" ng-change="search()">
-  </div>
-  <div>
-    <div class="list-group">
-      <a ng-repeat="result in searchResults" ng-model="searchResults" href="#" class="list-group-item">
-        <h4 class="list-group-item-heading">{{result.title}}</h4>
-        <p class="list-group-item-text">{{result.description}}</p>
-      </a>
+  <div class="col-xs-6">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search" ng-model="searchInput" ng-change="search()">
     </div>
-  </div>
+      <div class="list-group">
+        <a ng-repeat="result in searchResults" ng-model="searchResults" href="#" class="list-group-item">
+          <h4 class="list-group-item-heading">{{result.title}}</h4>
+          <p class="list-group-item-text">{{result.description}}</p>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <button type="button" class="btn btn-default">
+        <a href="/#/create-event">Create event</a>
+      </button>
+    </div>
 </div>
 
 <div class="row">
