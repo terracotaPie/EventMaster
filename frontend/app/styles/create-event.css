@@ -11,12 +11,7 @@
 	padding-right: 40px;
 }
 
-.time input {
-	width: 25%;
-	display: inline;
-}
-
-.event-name input {
+.form-input input {
 	width: 50%;
 	display: inline;
 }

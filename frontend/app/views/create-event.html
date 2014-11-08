@@ -3,43 +3,43 @@
     <div class="center-form panel event-panel">
         <div class="panel-body">
           <h2 class="text-center">Create Event</h2>
-          <form method="post" ng-submit="login()" name="eventForm">
-            <div class="form-group has-feedback event-name">
+          <form method="post" ng-submit="createEvent()" name="eventForm">
+            <div class="form-group has-feedback form-input">
               <p class='event-options'>EVENT NAME</p>
-              <input class="form-control input-lg" type="text" name="eventName" ng-model="eventName" placeholder="Event Name" required>
+              <input class="form-control input-lg" type="text" name="name" ng-model="eventName" placeholder="Event Name" required>
             </div>
 
-            <div class="form-group has-feedback time">
+            <div class="form-group has-feedback form-input">
               <p class='event-options'>START TIME</p>
-              <input class="form-control input-lg" type="text" name="startTime" ng-model="startTime" placeholder="Start Time" required>
+              <input class="form-control input-lg" type="text" name="time" ng-model="startTime" placeholder="Start Time" required>
             </div>
             
-            <div class="form-group has-feedback time">
-              <p class='event-options'>ENDING TIME</p>
-              <input class="form-control input-lg" type="text" name="endTime" ng-model="endTime" placeholder="Ending Time" required>
+            <div class="form-group has-feedback form-input">
+              <p class='event-options'>DURATION (h)</p>
+              <input class="form-control input-lg" type="number" name="duration" ng-model="duration" placeholder="Duration" required>
             </div>
             
             <div class="form-group has-feedback">
               <p class='event-options'>DESCRIPTION</p>
-              <textarea class="form-control input-lg" name="deskcription" ng-model="description" required></textarea>
+              <textarea class="form-control input-lg" name="description" ng-model="description" required></textarea>
             </div>
 
             <div class="form-group has-feedback event-radio-button">
               <p class='event-options'>Repeat:</p> 
-              <input class="form-control input-lg" type="radio" name="radio" ng-model="radio"> 
+              <input class="form-control input-lg" type="radio" ng-model="repeat.radio" value="true"> 
               <p class='event-options'>yes</p>
-              <input class="form-control input-lg" type="radio" name="radio" ng-model="radio" checked> 
+              <input class="form-control input-lg" type="radio" ng-model="repeat.radio" value="false" checked> 
               <p class='event-options'>No</p>
             </div>
 
             <div class="form-group has-feedback event-radio-button">
-              <input class="form-control input-lg" type="checkbox" name="sun" > <p class='event-options'>Sun</p>
-              <input class="form-control input-lg" type="checkbox" name="mon" > <p class='event-options'>Mon</p>
-              <input class="form-control input-lg" type="checkbox" name="tue" > <p class='event-options'>Tue</p>
-              <input class="form-control input-lg" type="checkbox" name="wed" > <p class='event-options'>Wed</p>
-              <input class="form-control input-lg" type="checkbox" name="thur" > <p class='event-options'>Thur</p>
-              <input class="form-control input-lg" type="checkbox" name="fri" > <p class='event-options'>Fri</p>
-              <input class="form-control input-lg" type="checkbox" name="sat" > <p class='event-options'>Sat</p>
+              <input class="form-control input-lg" type="checkbox" name="sun" ng-model="days.sun" > <p class='event-options'>Sun</p>
+              <input class="form-control input-lg" type="checkbox" name="mon" ng-model="days.mon"> <p class='event-options'>Mon</p>
+              <input class="form-control input-lg" type="checkbox" name="tue" ng-model="days.tue"> <p class='event-options'>Tue</p>
+              <input class="form-control input-lg" type="checkbox" name="wed" ng-model="days.wed"> <p class='event-options'>Wed</p>
+              <input class="form-control input-lg" type="checkbox" name="thur" ng-model="days.thu"> <p class='event-options'>Thur</p>
+              <input class="form-control input-lg" type="checkbox" name="fri" ng-model="days.fri"> <p class='event-options'>Fri</p>
+              <input class="form-control input-lg" type="checkbox" name="sat" ng-model="days.sat"> <p class='event-options'>Sat</p>
             </div>
 
 
