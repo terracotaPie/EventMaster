@@ -3,7 +3,7 @@
 body {
 	background-image: url("images/landing.png");
 	background-repeat: no-repeat;
-	background-position: 50% 80px;
+	background-position: 50% 65px;
 }
 h1 {
 	font-size: 3.5em;
@@ -30,7 +30,7 @@ h2 {
 .organized {
 	width: 420px;
 	text-align: center;
-	text-shadow: 0px 0px 20px black;
+	text-shadow: 0px 0px 16px black;
 	color: #eeeeee;
 }
 .register {
@@ -53,7 +53,6 @@ h2 {
 }
 .feature-text {
 	width: 500px;
-	text-align: center;
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
@@ -72,15 +71,15 @@ h2 {
 		
 			<div class="register" style="float:right; margin-right:75px; margin-top:50px">
 				<form role="form" style="margin-top:10px">
-					<h2 style="margin:19px; color:white">Register for free</h2>
+					<h2 style="margin:19px; color:white">Register with your UTMail</h2>
 					<div class="form-group" style="width:314px; margin-left:auto; margin-right:auto; margin-top:10px; margin-bottom:10px">
 						<input type="email" class="form-control input-lg" id="inputEmail" placeholder="Email" style="width:314px">
 					</div>
-					<div class="form-group" style="width:314px; margin-left:auto; margin-right:auto; margin-top:10px; margin-bottom:10px">
+					<div class="form-group" style="width:314px; margin-left:auto; margin-right:auto; margin-top:10px; margin-bottom:16px">
 						<input type="password" class="form-control input-lg" id="inputPassword" placeholder="Password" style="width:314px">
 					</div>
 					<button type="submit" class="btn btn-lg" style="float:left; margin-left:43px; width:150px">Sign up</button>
-					<p style="transform:translateY(15px); color:white">Or log in <a href="#/login">here</a>.</p>
+					<p style="transform:translateY(15px); float:right; margin-right:80px; color:white">Or log in <a href="#/login">here</a>.</p>
 				</form>
 			</div>
 		</div>
@@ -89,17 +88,27 @@ h2 {
 	<section class="center" style="padding-top: 50px">
 		<div class="feature">
 			<img style="float:left" src="images/feature.png" width="300" height="300">
-			<p class="feature-text" style="float:right">1<br>2<br>3</p>
+			<div class="feature-text" style="float:right; text-align:left">
+				<h2>Find event times, test dates,<br>
+				and deadlines for all of your courses.</h2>
+				<p>With an online verification system, events added by other users can be seen and added to your own calendar with ease. Adding an event to your calendar increases the event's hitcount and lets other users know which times are correct. Can't find a certain event for a group? Just add it to the group or your personal calendar.</p>
+			</div>
 		</div>
 		
 		<div class="feature">
 			<img style="float:right" src="images/feature.png" width="300" height="300">
-			<p class="feature-text" style="float:left">1<br>2<br>3</p>
+			<div class="feature-text" style="float:left; text-align:right">
+				<h2>Clean, simple interface.</h2>
+				<p>Search for courses and events from the universal search bar. Colour code your courses to your liking and filter groups to make it easier to find things on the web calendar that's all about organization.</p>
+			</div>
 		</div>
 		
 		<div class="feature">
 			<img style="float:left" src="images/feature.png" width="300" height="300">
-			<p class="feature-text" style="float:right">1<br>2<br>3</p>
+			<div class="feature-text" style="float:right; text-align:left">
+				<h2>Never miss a deadline again. *work in progress*</h2>
+				<p>Stay in the know with the cutting edge Unified Notification System (shorthand UNS). Reminders can be configured automatically for all events so you can plan your studies the way you want without worrying about sneaky deadlines. Event changes will also give notifications so you'll be able to keep on top of things.</p>
+			</div>
 		</div>
 	</section>
 </body>
