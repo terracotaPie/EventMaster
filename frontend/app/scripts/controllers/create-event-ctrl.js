@@ -8,6 +8,14 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('CreateCtrl', function () {
+  .controller('CreateEventCtrl', function ($scope, $log, SERVER_URL, event) {
+
+  	$scope.createEvent = function() {
+  		event.createEventServer(this)
+  		.then(function(response) {
+  			$log.log(response);
+  		});
+		
+  	};
 
   });
