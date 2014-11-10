@@ -45,6 +45,7 @@ angular.module('frontendApp')
     };
 
     $scope.putAllEvents = function (groups) {
+      $scope.myCalendar.fullCalendar('removeEvents');
       for(var group in groups)
         {
           for(var event in groups[group].events)
