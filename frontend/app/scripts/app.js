@@ -39,7 +39,7 @@ angular
       })
       .when('/create-event', {
         templateUrl: 'views/create-event.html',
-        controller: 'CreateCtrl'
+        controller: 'CreateEventCtrl'
       })
       .when('/landing', {
         templateUrl: 'views/landing.html'

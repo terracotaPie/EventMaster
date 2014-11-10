@@ -5,7 +5,9 @@ from flask.ext.cors import CORS
 from models import db, User, Group, Event
 import datetime
 import json
-
+from logging.handlers import RotatingFileHandler
+from logging import Formatter
+import logging
 
 class ConfigClass(object):
     SECRET_KEY = 'THIS IS AN INSECURE SECRET'
@@ -22,8 +24,14 @@ api = Api(app)
 db.init_app(app)
 cors = CORS(app)
 
+filehander = RotatingFileHandler('debug.log')
+filehander.setLevel(logging.INFO)
+filehander.setFormatter(Formatter(
+    '%(asctime)s %(levelname)s: %(message)s '
+    '[in %(pathname)s:%(lineno)d]'))
+app.logger.addHandler(filehander)
+
 JSON_DATETIME_FMT = '%Y-%m-%dT%H:%M:%S.%fZ'
-REPEAT_VALUES = ['daily','weekly','monthly']
 
 @app.before_first_request
 def initialize_database():
@@ -39,7 +47,9 @@ def json_creates(jclass):
             if required_args <= request.get_json().keys():
                 return f(*args, **kwargs)
             else:
-                abort(400, message='Json does not contain keys {}'.format(required_args))
+                error_message = 'Json does not contain keys {}'.format(required_args)
+                app.logger.info(error_message)
+                abort(400, message=error_message)
         return wrapped_f
     return wrap
 
@@ -63,6 +73,20 @@ class GroupList(Resource):
         except Exception as e:
             abort(400, message='Bad request: {}'.format(e))
 
+    def delete(self, group_id, event_id):
+        rj = request.get_json()
+
+        if 'group_id' in rj.keys():
+            try:
+                g = Group.query.get(rj['group_id'])
+                db.session.delete(g)
+                db.session.commit()
+                return {'message': 'success:while : pass'}
+            except Exception as ex:
+                abort(400, message='Bad data format or type: {}'.format(ex))
+        else:
+            abort(400, message='Missing key group_id in keys {}'.format(rj.keys()))
+
 
 class GroupResource(Resource):
     def get(self, group_id):
@@ -85,9 +109,6 @@ class EventList(Resource):
     def post(self, group_id):
         rj = request.get_json()
 
-        if(rj['repeat'] not in REPEAT_VALUES):
-            abort(400, message='Bad repeat value: {}'.format(rj['repeat']))
-
         rj['group_id'] = group_id
 
         try:
@@ -96,6 +117,7 @@ class EventList(Resource):
             abort(400, message='Bad time value: {}'.format(rj['time']))
 
         rj['tags'] = json.dumps(rj['tags'])
+        rj['days'] = json.dumps(rj['days'])
 
         g = Group.query.get(group_id)
         if g is None:
@@ -106,8 +128,23 @@ class EventList(Resource):
                 db.session.add(e)
                 db.session.commit()
                 return {'message': 'success'}
-            except Exception as e:
-                abort(400, message='Bad data format or type: {}'.format(e))
+            except Exception as ex:
+                abort(400, message='Bad data format or type: {}'.format(ex))
+
+    def delete(self, group_id, event_id):
+        rj = request.get_json()
+
+        if 'event_id' in rj.keys():
+            try:
+                e = Event.query.get(rj['event_id'])
+                db.session.delete(e)
+                db.session.commit()
+                return {'message': 'success:while : pass'}
+            except Exception as ex:
+                abort(400, message='Bad data format or type: {}'.format(ex))
+        else:
+            abort(400, message='Missing key event_id in keys {}'.format(rj.keys()))
+
 
 
 class SubscriptionList(Resource):
@@ -135,11 +172,29 @@ class SubscriptionListGroups(Resource):
         return [g.to_JSON() for g in {e.group for e in current_user.events}]
 
 
+class UnreadNotifications(Resource):
+    decorators = [login_required]
+
+    def get(self):
+        rj = request.get_json()
+        all_events = current_user.events
+
+        notifications = []
+        for e in all_events:
+            remaining_time = e.time - datetime.datetime.now()
+            offset = 10000
+            if(remaining_time > datetime.timedelta() and (remaining_time < datetime.timedelta(hours=offset))):
+                notifications.append({'name': e.name, 'description': e.description, 'remaining_time': str((remaining_time.seconds // 60)) + 'h'})
+
+        return notifications
+
+
 api.add_resource(GroupList, '/groups')
 api.add_resource(GroupResource, '/groups/<int:group_id>')
 api.add_resource(EventList, '/groups/<int:group_id>/events')
 api.add_resource(SubscriptionList, '/user/subscriptions/events')
 api.add_resource(SubscriptionListGroups, '/user/subscriptions/groups')
+api.add_resource(UnreadNotifications, '/user/unread_notifications')
 
 db_adapter = SQLAlchemyAdapter(db,  User)
 

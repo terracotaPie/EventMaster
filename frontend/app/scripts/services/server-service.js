@@ -11,4 +11,8 @@ angular.module('frontendApp')
 
   .factory('server', function($resource, SERVER_URL) {
 	    return $resource(SERVER_URL + '/groups/:id');
+  })
+
+  .factory('eventServer', function($resource, SERVER_URL) {
+	    return $resource(SERVER_URL + '/groups/:id/event/:id');
   });

@@ -6,7 +6,8 @@ JSON_DATETIME_FMT = '%Y-%m-%dT%H:%M:%S.%fZ'
 db = SQLAlchemy()
 user_event = db.Table('user_event',
     db.Column('user_id', db.Integer, db.ForeignKey('user.id')),
-    db.Column('event_id', db.Integer, db.ForeignKey('event.id'))
+    db.Column('event_id', db.Integer, db.ForeignKey('event.id')),
+    db.Column('offset', db.Integer)
 )
 
 user_group = db.Table('user_group',
@@ -56,16 +57,18 @@ class Event(db.Model):
     description = db.Column(db.String(500), nullable=False)
     time = db.Column(db.DateTime, nullable=False)
     tags = db.Column(db.Text, nullable=True)
-    repeat = db.Column(db.String(50), nullable=False)
+    days = db.Column(db.Text, nullable=True)
+    repeat = db.Column(db.Boolean, nullable=False)
     duration = db.Column(db.Integer, nullable=False)
     group_id = db.Column(db.Integer, db.ForeignKey('group.id'))
 
     def __init__(self, name, description, time, tags,
-                 repeat, duration, group_id):
+                 days, repeat, duration, group_id):
         self.name = name
         self.description = description
         self.time = time
         self.tags = tags
+        self.days = days
         self.repeat = repeat
         self.duration = duration
         self.group_id = group_id
@@ -79,5 +82,6 @@ class Event(db.Model):
                 'description': self.description,
                 'time': self.time.strftime(JSON_DATETIME_FMT),
                 'tags': json.loads(self.tags),
+                'days': json.loads(self.days),
                 'repeat': self.repeat,
                 'duration': self.duration}

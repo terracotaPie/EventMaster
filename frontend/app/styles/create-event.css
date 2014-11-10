@@ -11,14 +11,17 @@
 	padding-right: 40px;
 }
 
-.time input {
-	width: 25%;
+.form-input input {
+	width: 50%;
 	display: inline;
 }
 
-.event-name input {
-	width: 50%;
-	display: inline;
+.date {
+	margin-left:5px;
+}
+
+.time {
+	margin-left:10px;
 }
 
 input[type="radio"], input[type="checkbox"] {
