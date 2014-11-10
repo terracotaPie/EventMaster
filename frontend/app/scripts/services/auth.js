@@ -22,7 +22,6 @@ angular.module('frontendApp')
 
         $http(config)
             .success(function(data) {
-                $log.log(data);
         if(data.indexOf('EMPTY SHIT') > -1) {
           $log.log('success');
           $rootScope.isLogged = true;
@@ -37,5 +36,28 @@ angular.module('frontendApp')
         $log.error(error);
       });
     };
+
+    service.logout = function() {
+      var config = {
+           method: 'POST',
+           url: SERVER_URL + '/user/sign-out',
+           data: 'next=/user/sign-in',
+           headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            withCredentials: true
+          };
+
+        $http(config)
+            .success(function(data) {
+              $log.log(data);
+                  $log.log('Logged out User successfully');
+                  $rootScope.isLogged = false;
+                  $location.path('/login');
+            })
+            .error(function(error) {
+              $log.error(error);
+            });
+    };
+
+
     return service;
   });

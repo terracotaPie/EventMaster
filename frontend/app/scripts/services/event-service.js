@@ -25,7 +25,7 @@
 
 angular.module('frontendApp')
 
-  .factory('event', function($resource, $q, $log, server) {
+  .factory('event', function($resource, $q, $log) {
   	var service = {};
 
   	service.createEventServer = function(newEvent) {	
