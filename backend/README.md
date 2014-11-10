@@ -60,7 +60,7 @@ Events
 * GET /groups/id/events
  - Returns a json with all the events for this group [sorted by time?]
  ```json
-  [{"group_id": int(gid), "name": str(name), "description": str(description), "tags": [str(tag1), str(tag2)...], "time": str(timestamp), "repeat": str(repeat), "rank": int(rank)}, ...]
+  [{"group_id": int(gid), "name": str(name), "description": str(description), "days": {str(day1): str(True | False), str(day2): str(True | False), ...}, "tags": [str(tag1), str(tag2), ...], "time": str(timestamp), "repeat": boolean(true | false), "rank": int(rank)}, ...]
  ```
 
 Other
