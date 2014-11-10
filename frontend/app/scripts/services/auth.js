@@ -8,7 +8,7 @@
 angular.module('frontendApp')
 
   .factory('auth', function($resource, $http, $log, $rootScope, $location, SERVER_URL) {
-    var service = {}
+    var service = {};
 
     service.login = function (user) {
 
