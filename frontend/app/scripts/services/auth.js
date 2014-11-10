@@ -8,7 +8,7 @@
 angular.module('frontendApp')
 
   .factory('auth', function($resource, $http, $log, $rootScope, $location, SERVER_URL) {
-    var service = {};
+    var service = {}
 
     service.login = function (user) {
 
@@ -22,7 +22,6 @@ angular.module('frontendApp')
 
         $http(config)
             .success(function(data) {
-                $log.log(data);
         if(data.indexOf('EMPTY SHIT') > -1) {
           $log.log('success');
           $rootScope.isLogged = true;
@@ -59,6 +58,6 @@ angular.module('frontendApp')
             });
     };
 
-    
+
     return service;
   });
