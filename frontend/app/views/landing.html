@@ -1,114 +1,52 @@
-<head>
-<style>
-body {
-	background-image: url("images/landing.png");
-	background-repeat: no-repeat;
-	background-position: 50% 65px;
-}
-h1 {
-	font-size: 3.5em;
-	margin: 0px;
-}
-h2 {
-	font-size: 1.5em;
-}
-.header {
-	border-bottom: none;
-	margin-bottom: -10px;
-}
-.center {
-	margin-left: auto;
-	margin-right: auto;
-	width: 1000px;
-	transform: translateX(-135px);
-}
-.main {
-	height: 360px;
-	width: 100%;
-	margin-top: 10px;
-}
-.organized {
-	width: 420px;
-	text-align: center;
-	text-shadow: 0px 0px 16px black;
-	color: #eeeeee;
-}
-.register {
-	width: 400px;
-	height: 250px;
-	-moz-border-radius: 30px;
-	border-radius: 30px;
-	background-color: rgba(0, 0, 0, 0.5);
-	text-align: center;
-	text-shadow: 0px 0px 16px black;
-}
-.register-button {
-}
-.feature {
-	height: 300px;
-	margin-left: 50px;
-	margin-right: 50px;
-	margin-top: 40px;
-	margin-bottom: 40px;
-}
-.feature-text {
-	width: 500px;
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-}
-</style>
-</head>
+<div id="bg"></div>
 
-<body>
-	<section class="main">
-		<div class="center">
-			<div class="organized" style="float:left; margin-left:50px; margin-top:107px">
-				<h1>Stay organized.</h1>
-				<h2>All of your due dates, tests,<br>
-				and club events in one place.</h2>
-			</div>
-		
-			<div class="register" style="float:right; margin-right:75px; margin-top:50px">
-				<form role="form" style="margin-top:10px">
-					<h2 style="margin:19px; color:white">Register with your UTMail</h2>
-					<div class="form-group" style="width:314px; margin-left:auto; margin-right:auto; margin-top:10px; margin-bottom:10px">
-						<input type="email" class="form-control input-lg" id="inputEmail" placeholder="Email" style="width:314px">
-					</div>
-					<div class="form-group" style="width:314px; margin-left:auto; margin-right:auto; margin-top:10px; margin-bottom:16px">
-						<input type="password" class="form-control input-lg" id="inputPassword" placeholder="Password" style="width:314px">
-					</div>
-					<button type="submit" class="btn btn-lg" style="float:left; margin-left:43px; width:150px">Sign up</button>
-					<p style="transform:translateY(15px); float:right; margin-right:80px; color:white">Or log in <a href="#/login">here</a>.</p>
-				</form>
-			</div>
+<section id="main">
+	<div class="center">
+		<div id="organized">
+			<h1 id="organized-text">Stay organized.</h1>
+			<h3>All of your due dates, tests,<br>
+			and club events in one place.</h3>
 		</div>
-	</section>
 	
-	<section class="center" style="padding-top: 50px">
-		<div class="feature">
-			<img style="float:left" src="images/feature.png" width="300" height="300">
-			<div class="feature-text" style="float:right; text-align:left">
-				<h2>Find event times, test dates,<br>
-				and deadlines for all of your courses.</h2>
-				<p>With an online verification system, events added by other users can be seen and added to your own calendar with ease. Adding an event to your calendar increases the event's hitcount and lets other users know which times are correct. Can't find a certain event for a group? Just add it to the group or your personal calendar.</p>
-			</div>
+		<div id="register">
+			<form role="form">
+				<h3 id="utmail">Register with your UTMail</h3>
+				<div class="form-group form-scale">
+					<input type="email" class="form-control input-lg form-scale" id="inputEmail" placeholder="Email">
+				</div>
+				<div class="form-group form-scale">
+					<input type="password" class="form-control input-lg form-scale" id="inputPassword" placeholder="Password">
+				</div>
+				<button type="submit" class="btn btn-lg register-button">Sign up</button>
+				<p id="login-link">Or log in <a href="#/login">here</a>.</p>
+			</form>
 		</div>
-		
-		<div class="feature">
-			<img style="float:right" src="images/feature.png" width="300" height="300">
-			<div class="feature-text" style="float:left; text-align:right">
-				<h2>Clean, simple interface.</h2>
-				<p>Search for courses and events from the universal search bar. Colour code your courses to your liking and filter groups to make it easier to find things on the web calendar that's all about organization.</p>
-			</div>
+	</div>
+</section>
+
+<section class="center">
+	<div class="feature">
+		<img class="left" src="images/feature.png" width="300" height="300">
+		<div class="feature-text right">
+			<h3>Find event times, test dates,<br>
+			and deadlines for all of your courses.</h3>
+			<p>With an online verification system, events added by other users can be seen and added to your own calendar with ease. Adding an event to your calendar increases the event's hitcount and lets other users know which times are correct. Can't find a certain event for a group? Just add it to the group or your personal calendar.</p>
 		</div>
-		
-		<div class="feature">
-			<img style="float:left" src="images/feature.png" width="300" height="300">
-			<div class="feature-text" style="float:right; text-align:left">
-				<h2>Never miss a deadline again. *work in progress*</h2>
-				<p>Stay in the know with the cutting edge Unified Notification System (shorthand UNS). Reminders can be configured automatically for all events so you can plan your studies the way you want without worrying about sneaky deadlines. Event changes will also give notifications so you'll be able to keep on top of things.</p>
-			</div>
+	</div>
+	
+	<div class="feature">
+		<img class="right" src="images/feature.png" width="300" height="300">
+		<div class="feature-text left">
+			<h3>Clean, simple interface.</h3>
+			<p>Search for courses and events from the universal search bar. Colour code your courses to your liking and filter groups to make it easier to find things on the web calendar that's all about organization.</p>
 		</div>
-	</section>
-</body>
+	</div>
+	
+	<div class="feature">
+		<img class="left" src="images/feature.png" width="300" height="300">
+		<div class="feature-text right">
+			<h3>Never miss a deadline again. *work in progress*</h3>
+			<p>Stay in the know with the cutting edge Unified Notification System (shorthand UNS). Reminders can be configured automatically for all events so you can plan your studies the way you want without worrying about sneaky deadlines. Event changes will also give notifications so you'll be able to keep on top of things.</p>
+		</div>
+	</div>
+</section>
