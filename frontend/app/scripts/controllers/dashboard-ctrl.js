@@ -7,11 +7,12 @@
  */
 
 angular.module('frontendApp')
-  .controller('DashboardCtrl', function ($scope, $log, group) {
+  .controller('DashboardCtrl', function ($scope, $log, group,$rootScope) {
 
   /*
       Fetching Groups from group-service.
   */
+  $log.log($rootScope.isLogged);
   $scope.group = {};
   $scope.events = [];
   $scope.activeMenu = 'All';
