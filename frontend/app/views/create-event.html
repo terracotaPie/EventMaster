@@ -10,30 +10,30 @@
             </div>
 
             <div class="form-group has-feedback form-input">
-              <p class='event-options'>START DATE</p>
-              <input class="form-control input-lg date" type="date" name="date" ng-model="startDime" placeholder="Start Date" required>
+              <p class='event-options'>JSON DATE</p>
+              <input class="form-control input-lg time" type="text" name="time" ng-model="startTime" placeholder="Start Time" required>
+            </div>
+
+            <div class="form-group has-feedback">
+              <p class='event-options'>Group ID</p>
+              <textarea class="form-control input-lg" type="number" name="group-id" ng-model="groupId" required></textarea>
             </div>
 
             <div class="form-group has-feedback form-input">
-              <p class='event-options'>START TIME</p>
-              <input class="form-control input-lg time" type="text" name="time" ng-model="startTime" placeholder="Start Time" required>
-            </div>
-            
-            <div class="form-group has-feedback form-input">
-              <p class='event-options'>DURATION (h)</p>
+              <p class='event-options'>DURATION</p>
               <input class="form-control input-lg" type="number" name="duration" ng-model="duration" placeholder="Duration" required>
             </div>
-            
+
             <div class="form-group has-feedback">
               <p class='event-options'>DESCRIPTION</p>
               <textarea class="form-control input-lg" name="description" ng-model="description" required></textarea>
             </div>
 
             <div class="form-group has-feedback event-radio-button">
-              <p class='event-options'>Repeat:</p> 
-              <input class="form-control input-lg" type="radio" ng-model="repeat.radio" value="true"> 
+              <p class='event-options'>Repeat:</p>
+              <input class="form-control input-lg" type="radio" ng-model="repeat.radio" value="true">
               <p class='event-options'>yes</p>
-              <input class="form-control input-lg" type="radio" ng-model="repeat.radio" value="false" checked> 
+              <input class="form-control input-lg" type="radio" ng-model="repeat.radio" value="false" checked>
               <p class='event-options'>No</p>
             </div>
 
