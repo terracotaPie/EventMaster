@@ -1,0 +1,32 @@
+/*=======Notification CSS======*/
+
+.notification-button-container {
+	float: right !important;
+}
+
+.notification-button-container button {
+	display: inline;
+	width: 135%;
+}
+
+.notification-button-container button a{
+	float: left;
+}
+
+.notification-container {
+  height: 12px;
+  width: 12px;
+  margin-left: 5px;
+  background: rgba(247, 9, 9, 0.85);
+  float: left;
+  border-radius: 5px;
+  cursor: pointer;
+} 
+
+
+.notification-count {
+  position: relative;
+  font-size: 8px;
+  color: white;
+  bottom: 5.5px;
+}
