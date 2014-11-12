@@ -52,10 +52,10 @@ angular.module('frontendApp')
       for(var group in groups)
       {
           for(var event in groups[group].events)
-            {     
+            {
               var d = new Date(groups[group].events[event].time);
               d.setMinutes(d.getMinutes() + groups[group].events[event].duration);
-              if ($scope.groupsColors.length == 0) {
+              if ($scope.groupsColors.length === 0) {
                 $scope.groupsColors = $scope.colors;
               }
               $scope.myCalendar.fullCalendar( 'renderEvent', {
@@ -64,13 +64,13 @@ angular.module('frontendApp')
                 color:$scope.groupsColors[group],
                 end: d.toJSON(),
                 description: groups[group].events[event].description
-             
+
               });
-      
+
             }
-       
-        }    
- 
+
+        }
+
       $scope.events = $scope.myCalendar.fullCalendar('clientEvents');
     };
 
