@@ -17,7 +17,7 @@ angular.module('frontendApp')
     $scope.setGroup = function(id,name) {
       $scope.groupName = name;
       $scope.groupId = id;
-    }
+    };
   	$scope.createEvent = function() {
   		event.setEvent({
         'name': $scope.eventName,
