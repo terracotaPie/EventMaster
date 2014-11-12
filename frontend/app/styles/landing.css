@@ -1,0 +1,93 @@
+﻿.center {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	transform: translateX(-135px);
+}
+
+/* Formatting for main section */
+#main {
+	height: 360px;
+	width: 100%;
+	margin-top: -380px;
+	margin-bottom: 90px;
+}
+#bg {
+	/* stupid bg position override */
+	margin-top: -44px;
+	margin-left: -610px;
+	padding-top: 44px;
+	padding-left: 610px;
+	width: 1920px;
+	height: 410px;
+	background-image: url("../images/landing.png");
+}
+
+/* Text on the left of main */
+#organized {
+	width: 420px;
+	text-align: center;
+	text-shadow: 0px 0px 16px black;
+	color: #eeeeee;
+	float: left;
+	margin-left: 50px;
+	margin-top: 107px;
+}
+#organized-text {
+	font-size: 3.5em;
+	margin: 0px;
+}
+
+/* Registration/login on the right of main */
+#register {
+	width: 400px;
+	height: 250px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background-color: rgba(0, 0, 0, 0.5);
+	text-align: center;
+	text-shadow: 0px 0px 16px black;
+	float: right;
+	margin-right: 75px;
+	margin-top: 50px;
+}
+.form-scale {
+	width: 314px;
+	margin: 10px auto 10px auto;
+}
+.register-button {
+	float: left;
+	margin-left: 43px;
+	margin-top: 6px;
+	width: 150px;
+}
+#utmail {
+	margin: 19px;
+	color: white;
+}
+#login-link {
+	transform: translateY(21px);
+	float: right;
+	margin-right: 80px;
+	color: white;
+}
+
+/* Formatting for features */
+.feature {
+	height: 300px;
+	margin: 40px 50px 40px 50px;
+}
+.feature-text {
+	width: 500px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.left {
+	float: left;
+	text-align: right;
+}
+.right {
+	float: right;
+	text-align: left;
+}
