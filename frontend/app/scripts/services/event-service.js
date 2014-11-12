@@ -25,9 +25,8 @@
 
 angular.module('frontendApp')
 
-  .factory('event', function($resource, $q, $log, eventServer) {
+  .factory('event', function($resource, $q, $log, eventServer, $location) {
     var service = {};
-
     /* Getting a group */
     service.setEvent = function (newEvent,groupId) {
       var deferred = $q.defer();
@@ -36,6 +35,7 @@ angular.module('frontendApp')
         .then (function() {
           deferred.resolve();
           $log.log('Event set successfully');
+          $location.path('/dashboard');
         })
         .catch(function(error) {
           deferred.reject();
