@@ -41,6 +41,10 @@ angular
         templateUrl: 'views/create-event.html',
         controller: 'CreateEventCtrl'
       })
+      .when('/create-group', {
+        templateUrl: 'views/create-group.html',
+        controller: 'CreateGroupCtrl'
+      })
       .when('/landing', {
         templateUrl: 'views/landing.html'
       })

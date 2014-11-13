@@ -13,11 +13,11 @@ angular.module('frontendApp')
   	/* Getting a group */
   	service.getGroups = function() {
 	      return server.query().$promise
-	          .then(function(allGroups) 
+	          .then(function(allGroups)
 	          	{
 	              return allGroups;
 	          	})
-	          .catch( function(error) 
+	          .catch( function(error)
 		      {
 		          throw error;
 		      });
@@ -26,7 +26,7 @@ angular.module('frontendApp')
   	/* Creating a group */
   	service.setGroup = function (newGroup) {
   		var deferred = $q.defer();
-  		server.save({newGroup: newGroup})
+  		server.save(newGroup)
   		  .$promise
   		  .then (function() {
   		  	deferred.resolve();
@@ -38,6 +38,6 @@ angular.module('frontendApp')
   		  });
   		return deferred.promise;
   	};
- 	
+
   	return service;
-  });				
+  });
