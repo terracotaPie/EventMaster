@@ -7,8 +7,9 @@
 }
 
 .event-options{
-	display: inline;
-	padding-right: 40px;
+	float: left;
+	width: 130px;
+	padding-top: 10px;
 }
 
 .form-input input {
@@ -18,10 +19,6 @@
 
 .date {
 	margin-left:5px;
-}
-
-.time {
-	margin-left:10px;
 }
 
 input[type="radio"], input[type="checkbox"] {
@@ -35,3 +32,4 @@ input[type="radio"], input[type="checkbox"] {
 	border-radius: 2px;
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 17px;
 }
+

@@ -16,6 +16,7 @@ angular.module('frontendApp')
   $scope.events = [];
   $scope.activeMenu = 'All';
   $scope.colors = ['#00A0B0','#6A4A3C','#CC333F','#EB6841','#EDC951'];
+  $scope.groupsColors = [];
   /*
     Store search input and results for this search
   */
@@ -30,13 +31,15 @@ angular.module('frontendApp')
 
     $scope.filter = function (group) {
       $scope.myCalendar.fullCalendar('removeEvents');
+      var c = 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
+      $scope.groupsColors.splice($scope.groups.indexOf(group), 1, c);
+
       for(var event in group.events) {
         var d = new Date(group.events[event].time);
-
         $scope.myCalendar.fullCalendar( 'renderEvent', {
           title:group.events[event].name,
           start:group.events[event].time,
-          color:$scope.colors[Math.floor((Math.random() * 5) + 1)],
+          color:c,
           end: d.toJSON(),
           description: group.events[event].description
         });
@@ -47,20 +50,27 @@ angular.module('frontendApp')
     $scope.putAllEvents = function (groups) {
       $scope.myCalendar.fullCalendar('removeEvents');
       for(var group in groups)
-        {
+      {
           for(var event in groups[group].events)
             {
               var d = new Date(groups[group].events[event].time);
               d.setMinutes(d.getMinutes() + groups[group].events[event].duration);
+              if ($scope.groupsColors.length === 0) {
+                $scope.groupsColors = $scope.colors;
+              }
               $scope.myCalendar.fullCalendar( 'renderEvent', {
                 title:groups[group].events[event].name,
                 start:groups[group].events[event].time,
-                color:$scope.colors[group],
+                color:$scope.groupsColors[group],
                 end: d.toJSON(),
                 description: groups[group].events[event].description
+
               });
+
             }
+
         }
+
       $scope.events = $scope.myCalendar.fullCalendar('clientEvents');
     };
 

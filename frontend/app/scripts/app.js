@@ -45,6 +45,6 @@ angular
         templateUrl: 'views/landing.html'
       })
       .otherwise({
-        redirectTo: '/login'
+        redirectTo: '/landing'
       });
   });

@@ -5,7 +5,7 @@
 	- Fetching event info, creating events, updating events info etc.
 
 	Current object type sent to server:
-	Object : 
+	Object :
 		{
 		  name: "Awesome event",
 		  description: "This is an Awesome event",
@@ -25,15 +25,23 @@
 
 angular.module('frontendApp')
 
-  .factory('event', function($resource, $q, $log) {
-  	var service = {};
-
-  	service.createEventServer = function(newEvent) {	
-  		var deferred = $q.defer();
-  		$log.log(newEvent);
-  		/* Needs to be implemented when server accepts correct arguments*/
-  		return deferred.promise;
-  	};
-
-  	return service;
-});
+  .factory('event', function($resource, $q, $log, eventServer, $location) {
+    var service = {};
+    /* Getting a group */
+    service.setEvent = function (newEvent,groupId) {
+      var deferred = $q.defer();
+      eventServer.save({id:groupId},newEvent)
+        .$promise
+        .then (function() {
+          deferred.resolve();
+          $log.log('Event set successfully');
+          $location.path('/dashboard');
+        })
+        .catch(function(error) {
+          deferred.reject();
+          throw error;
+        });
+      return deferred.promise;
+    };
+    return service;
+  });

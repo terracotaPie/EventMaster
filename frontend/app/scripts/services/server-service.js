@@ -7,12 +7,12 @@
 
 angular.module('frontendApp')
 
-  .constant('SERVER_URL', 'http://pls.oggettone.com') 
+  .constant('SERVER_URL', 'http://pls.oggettone.com')
 
   .factory('server', function($resource, SERVER_URL) {
 	    return $resource(SERVER_URL + '/groups/:id');
   })
 
   .factory('eventServer', function($resource, SERVER_URL) {
-	    return $resource(SERVER_URL + '/groups/:id/event/:id');
+	    return $resource(SERVER_URL + '/groups/:id/events/');
   });
