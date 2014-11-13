@@ -24,6 +24,16 @@ The table below indicates which team member reviewed which other team member's c
 -----
 
 ## Reviewer : terracotaPie
+* Really liked the structure Rick used for backend services.  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/e7c42ab8eb8010eabc2be67089ac80a3ce827f1a
+* Really elegant authentification using cookies.  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/6ab9d694740ce40a538ae72c95ed5f48afc1aca6
+* Pushed hotfixes with speed of light when needed  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/73bba167aba6342a377a9f660fa04aa865b387cc
+* Fixed code inconsistency and bad style  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/ffe0618718a04b67048fb3d3d7b25b8163c88b05
+* Helped other people start writing code - preparing needed files  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/7623eace733290c8d4e1bba10a68f89b10bb51d7
 
 -----
 
