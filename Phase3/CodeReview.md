@@ -45,6 +45,10 @@ https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/f6d1b13201e9c
 
 ## Reviewer : talesgames
 
+* I design the layout for the create_event page and g2huda implemented it to the frontend(https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/b56e87d5d416d6af499f4be728b9af1e030df6e4)
+* A bug was found where the event whould have distict color each time the page reloaded. the bug was fixed later (https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/aca9400d4cdc450ce55050409ed7e76e547cd2bf)
+* The first page for create event had some messy fields, so I asked for g2huda to align then (https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/a226c439bffaffce00d91ae72b63fa3f5a6f7413)
+
 -----
 
 ## Reviewer : g2huda
