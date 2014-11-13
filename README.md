@@ -1,5 +1,10 @@
 Proj-Evening-Team12-repo
 ========================
+# Phase 3:  
+* [CodeReview.md](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/blob/master/Phase3/CodeReview.md)
+* [Release Plan](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/blob/master/Phase3/Phase3-Release%20Plan.md)
+* [Process.md](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/blob/master/Phase3/Process.md)
+
 
 # Phase 2:
 * [process.md](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/blob/master/Phase2/Process.md)  
