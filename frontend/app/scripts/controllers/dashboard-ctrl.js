@@ -17,6 +17,7 @@ angular.module('frontendApp')
   $scope.activeMenu = 'All';
   $scope.colors = ['#00A0B0','#6A4A3C','#CC333F','#EB6841','#EDC951'];
   $scope.groupsColors = [];
+  $scope.notifications = ['1','2','3'];
   /*
     Store search input and results for this search
   */
@@ -29,7 +30,14 @@ angular.module('frontendApp')
         $scope.putAllEvents($scope.groups);
       });
 
-  notification.getNotifications();
+  notification.getNotifications()
+    .success(function(data) {
+      $log.log(data);
+      $scope.notifications = data;
+    })
+    .error(function(error) {
+      $log.error(error);
+    });
 
     $scope.filter = function (group) {
       $scope.myCalendar.fullCalendar('removeEvents');
