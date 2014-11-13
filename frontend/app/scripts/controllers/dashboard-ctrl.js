@@ -7,7 +7,7 @@
  */
 
 angular.module('frontendApp')
-  .controller('DashboardCtrl', function ($scope, $log, group) {
+  .controller('DashboardCtrl', function ($scope, $log, group, notification) {
 
   /*
       Fetching Groups from group-service.
@@ -27,6 +27,13 @@ angular.module('frontendApp')
       {
         $scope.groups = groups;
         $scope.putAllEvents($scope.groups);
+      });
+
+  notification.getNotifications()
+    .then( function(notifications)
+      {
+        $scope.notifications = notifications;
+        $log.log(notifications);
       });
 
     $scope.filter = function (group) {
