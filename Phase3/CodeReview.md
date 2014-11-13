@@ -46,6 +46,8 @@ https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/ffe0618718a04
 https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/b26b7b2e6f9921fc360425b94803e35424e7012en  
 * He also implemented the coloring feature on the calender which worked intuitively  
 https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/f6d1b13201e9cd50ed92fb1ade4a29e7df20cc71
+* Implemented search feature to search events on the dashboard  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/a88fd76cc6d3254fc60966abf0d29b56dea28200
 
 -----
 
