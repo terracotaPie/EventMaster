@@ -68,7 +68,7 @@ https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/a88fd76cc6d32
 * I thought the implementation he made was messy and bad because he used inline styling. It is preferable to separate document structure from the styling. (https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/474f94ee0e5e23185ad1347550eb7eb43ad93319)
 * As for the new image, which he added as a background at the landing page - The dark navy color is easy on the eyes. It helps with the contrast of the letters, making them stand out and easier to read. (https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/da18dccbfad7f127df67dc061c8b3008abf13035)
 * Adding 'Register with your UTMail' saves the user a step of searching for the necessary information for registeration. Adding a header and sub-header emphasizes the benefits of using this service (https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/da18dccbfad7f127df67dc061c8b3008abf13035)
-* I noticed he major changes to landing files. I liked the implemenation of the css file, that way any rearrangement of style can be done easily; making the html page looks a lot neater. (https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/74e4fd1df08bb67e16e24f7993f37ccf8fb8fd4f)
+* I noticed the major changes he made to the landing files. I liked the implemenation of the css file, that way any rearrangement of style can be done easily; making the html page looks a lot neater. (https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/74e4fd1df08bb67e16e24f7993f37ccf8fb8fd4f)
 
 -----
 
