@@ -5,12 +5,12 @@ The table below indicates which team member reviewed which other team member's c
 | Reviewer | Coder |
 | -------- | ----- |
 | MartinPetkov |  inve1 |
-| g2huda |  kitsunemimi |
+| g2huda |  Kitsunemimi |
 | talesgames |  g2huda |
 | inve1 |  MartinPetkov |
-| terracotapie |   |
-| cadz7 |   |
-| kitsunemimi |   |
+| terracotaPie |  cadz7 |
+| cadz7 |   terracotaPie |
+| Kitsunemimi |   talesGames |
 
 
 -----
@@ -23,11 +23,19 @@ The table below indicates which team member reviewed which other team member's c
 
 -----
 
-## Reviewer : terracotapie
+## Reviewer : terracotaPie
 
 -----
 
 ## Reviewer : cadz7
+* I noticed a hotfix for user logout in the code base.  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/fdf156d648c5ce7bf05a859c93f075ba1ffe5150    
+I added correct method in the authentication service to deal with logout.  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/ffe0618718a04b67048fb3d3d7b25b8163c88b05  
+* I thought implementation of adding custom events was done correctly and he made it functional  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/b26b7b2e6f9921fc360425b94803e35424e7012en  
+* He also implemented the coloring feature on the calender which worked intuitively  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/f6d1b13201e9cd50ed92fb1ade4a29e7df20cc71
 
 -----
 
@@ -43,5 +51,7 @@ The table below indicates which team member reviewed which other team member's c
 
 -----
 
-## Reviewer : kitsunemimi
+## Reviewer : Kitsunemimi
 
+ * I found that the design prototypes that talesgames drafts are helpful for keeping the design of our project on track (drafts located on slack)
+ * I would recommend that talesgames tries to contribute more to the codebase for our project.
