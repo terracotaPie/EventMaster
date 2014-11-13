@@ -1,22 +1,23 @@
 'use strict';
 angular.module('frontendApp')
 
-  .factory('notification', function($resource, $q, $log, notificationServer) {
+  .factory('notification', function($resource, $q, $log, $http, notificationServer, SERVER_URL) {
     var service = {};
     /* Getting a group */
     service.getNotifications = function () {
-      var deferred = $q.defer();
-      notificationServer.query()
-        .$promise
-        .then (function() {
-          deferred.resolve();
-          $log.log('Notification recieved');
+      var config = {
+        method: 'GET',
+        url: SERVER_URL + '/user/unread_notifications',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        withCredentials: true
+      };
+      $http(config)
+        .success(function(data) {
+          $log.log(data);
         })
-        .catch(function(error) {
-          deferred.reject();
-          throw error;
+        .error(function(error) {
+          $log.error(error);
         });
-      return deferred.promise;
     };
     return service;
   });

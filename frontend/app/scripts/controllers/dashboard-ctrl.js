@@ -29,12 +29,7 @@ angular.module('frontendApp')
         $scope.putAllEvents($scope.groups);
       });
 
-  notification.getNotifications()
-    .then( function(notifications)
-      {
-        $scope.notifications = notifications;
-        $log.log(notifications);
-      });
+  notification.getNotifications();
 
     $scope.filter = function (group) {
       $scope.myCalendar.fullCalendar('removeEvents');
