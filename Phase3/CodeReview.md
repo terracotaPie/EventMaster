@@ -8,9 +8,9 @@ The table below indicates which team member reviewed which other team member's c
 | g2huda |  kitsunemimi |
 | talesgames |  g2huda |
 | inve1 |  MartinPetkov |
-| terracotapie |   |
-| cadz7 |   |
-| kitsunemimi |   |
+| terracotaPie |  cadz7 |
+| cadz7 |   terracotaPie |
+| kitsunemimi |   talesGames |
 
 
 -----
@@ -23,7 +23,7 @@ The table below indicates which team member reviewed which other team member's c
 
 -----
 
-## Reviewer : terracotapie
+## Reviewer : terracotaPie
 
 -----
 
