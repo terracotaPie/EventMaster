@@ -5,12 +5,12 @@ The table below indicates which team member reviewed which other team member's c
 | Reviewer | Coder |
 | -------- | ----- |
 | MartinPetkov |  inve1 |
-| g2huda |  kitsunemimi |
+| g2huda |  Kitsunemimi |
 | talesgames |  g2huda |
 | inve1 |  MartinPetkov |
 | terracotaPie |  cadz7 |
 | cadz7 |   terracotaPie |
-| kitsunemimi |   talesGames |
+| Kitsunemimi |   talesGames |
 
 
 -----
@@ -51,5 +51,7 @@ https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/f6d1b13201e9c
 
 -----
 
-## Reviewer : kitsunemimi
+## Reviewer : Kitsunemimi
 
+ * I found that the design prototypes that talesgames drafts are helpful for keeping the design of our project on track (drafts located on slack)
+ * I would recommend that talesgames tries to contribute more to the codebase for our project.
