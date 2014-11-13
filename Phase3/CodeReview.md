@@ -7,7 +7,7 @@ The table below indicates which team member reviewed which other team member's c
 | MartinPetkov |  inve1 |
 | g2huda |  kitsunemimi |
 | talesgames |  g2huda |
-| inve1 |   |
+| inve1 |  MartinPetkov |
 | terracotapie |   |
 | cadz7 |   |
 | kitsunemimi |   |
