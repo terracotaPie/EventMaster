@@ -21,10 +21,11 @@ angular.module('frontendApp')
   	$scope.createEvent = function() {
   		event.setEvent({
         'name': $scope.eventName,
+        'days': {},
         'description': $scope.description,
         'tags': ['tagg','tagg2'],
         'time': $scope.startTime,
-        'repeat': 'monthly',
+        'repeat': true,
         'duration': $scope.duration
       }, $scope.groupId)
   		.then(function(response) {
