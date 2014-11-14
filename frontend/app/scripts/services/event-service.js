@@ -28,9 +28,9 @@ angular.module('frontendApp')
   .factory('event', function($resource, $q, $log, eventServer, $location) {
     var service = {};
     /* Getting a group */
-    service.setEvent = function (newEvent,groupId) {
+    service.setEvent = function (newEvent, groupId) {
       var deferred = $q.defer();
-      eventServer.save({id:groupId},newEvent)
+      eventServer.save({id:groupId}, newEvent)
         .$promise
         .then (function() {
           deferred.resolve();

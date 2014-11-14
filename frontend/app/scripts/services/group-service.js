@@ -15,6 +15,7 @@ angular.module('frontendApp')
 	      return server.query().$promise
 	          .then(function(allGroups)
 	          	{
+                    service.allGroups = allGroups;
 	              return allGroups;
 	          	})
 	          .catch( function(error)
