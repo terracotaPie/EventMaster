@@ -24,17 +24,6 @@ angular.module('frontendApp')
   $scope.searchInput = '';
   $scope.searchResults = [];
 
-<<<<<<< HEAD
-  notification.getNotifications()
-    .success(function(data) {
-      $log.log(data);
-      $scope.notifications = data;
-    })
-    .error(function(error) {
-      $log.error(error);
-    });
-=======
-
   $scope.fetchAllGroups = function() {
     group.getGroups()
       .then( function(groups)
@@ -43,7 +32,6 @@ angular.module('frontendApp')
           $scope.putAllEvents($scope.groups);
         });
     };
->>>>>>> 9bf44a4c9b1862aba30c4750c9798d84ebddd65d
 
     $scope.filter = function (group) {
       $scope.myCalendar.fullCalendar('removeEvents');
