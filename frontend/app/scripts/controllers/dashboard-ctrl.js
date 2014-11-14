@@ -22,14 +22,16 @@ angular.module('frontendApp')
   */
   $scope.searchInput = '';
   $scope.searchResults = [];
-  group.getGroups()
-    .then( function(groups)
-      {
-        $scope.groups = groups;
-        $scope.putAllEvents($scope.groups);
-      });
 
-  notification.getNotifications();
+
+  $scope.fetchAllGroups = function() {
+    group.getGroups()
+      .then( function(groups)
+        {
+          $scope.groups = groups;
+          $scope.putAllEvents($scope.groups);
+        });
+    };
 
     $scope.filter = function (group) {
       $scope.myCalendar.fullCalendar('removeEvents');
@@ -68,9 +70,7 @@ angular.module('frontendApp')
                 description: groups[group].events[event].description
 
               });
-
             }
-
         }
 
       $scope.events = $scope.myCalendar.fullCalendar('clientEvents');
@@ -120,4 +120,7 @@ angular.module('frontendApp')
     };
 
     $scope.eventSources = [];
+    $scope.fetchAllGroups();
+    notification.getNotifications();
+
   });
