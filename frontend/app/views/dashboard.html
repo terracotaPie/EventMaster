@@ -43,7 +43,7 @@ Fore more information on ui-calendar go to controller definition(script/dashboar
               <a ng-click="putAllEvents(groups);makeActive('All')">All</a>
             </li>
             <li ng-repeat="group in groups" data-ng-class='{active:isActive(group.name)}'>
-              <a ng-click="filter(group);makeActive(group.name)">
+              <a ng-click="filter(group);makeActive(group.name)" class="group-name-text">
                 {{group.name}}
               </a>
             </li>

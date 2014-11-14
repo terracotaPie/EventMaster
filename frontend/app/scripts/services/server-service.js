@@ -14,7 +14,7 @@ angular.module('frontendApp')
   })
 
   .factory('eventServer', function($resource, SERVER_URL) {
-    return $resource(SERVER_URL + '/groups/:id/events/');
+    return $resource(SERVER_URL + '/groups/:id/events/:id');
   })
   .factory('notificationServer', function($resource, SERVER_URL) {
     var tmp = $resource(SERVER_URL + '/user/unread_notifications/');
