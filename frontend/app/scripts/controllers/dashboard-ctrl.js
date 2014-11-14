@@ -17,7 +17,7 @@ angular.module('frontendApp')
   $scope.activeMenu = 'All';
   $scope.colors = ['#00A0B0','#6A4A3C','#CC333F','#EB6841','#EDC951'];
   $scope.groupsColors = [];
-  $scope.notifications = ['1','2','3'];
+  $scope.notifications = [];
   /*
     Store search input and results for this search
   */
@@ -121,6 +121,12 @@ angular.module('frontendApp')
 
     $scope.eventSources = [];
     $scope.fetchAllGroups();
-    notification.getNotifications();
+    notification.getNotifications()
+      .success(function(data) {
+        $scope.notifications = data;
+    })
+      .error(function(data) {
+        $log.log(data);
+      });
 
   });
