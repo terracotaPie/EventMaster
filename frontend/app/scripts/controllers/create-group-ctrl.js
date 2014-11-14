@@ -21,7 +21,5 @@ angular.module('frontendApp')
         .then(function(response) {
           $log.log(response);
         });
-
     };
-
   });

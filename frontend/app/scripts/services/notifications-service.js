@@ -11,13 +11,7 @@ angular.module('frontendApp')
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         withCredentials: true
       };
-      $http(config)
-        .success(function(data) {
-          $log.log(data);
-        })
-        .error(function(error) {
-          $log.error(error);
-        });
+      return $http(config);
     };
     return service;
   });
