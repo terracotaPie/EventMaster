@@ -52,6 +52,8 @@ https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/a88fd76cc6d32
 -----
 
 ## Reviewer : inve1
+* Nice work on implementing error handling on the backend https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/7ea52f6fad46d0bb2b8c39a000bb2d6c91d2eddd
+* Used the correct logging paradigms [using the logger object flask provides, etc] https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/0ae7f207864fd47412fde8757c391e5087ec7755 [first part of that commit, should probably have split that into multiple commits]
 
 -----
 

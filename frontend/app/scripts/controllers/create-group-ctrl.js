@@ -11,7 +11,7 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('CreateGroupCtrl', function ($scope, $log, SERVER_URL,group) {
+  .controller('CreateGroupCtrl', function ($scope, $log, SERVER_URL, group) {
     $scope.createGroup = function() {
       group.setGroup({
         'name': $scope.groupName,

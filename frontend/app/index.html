@@ -36,7 +36,7 @@
           <li><a ng-href="#/about">About</a></li>
           <li><a ng-href="#/dashboard">Dashboard</a></li>
           <li><a ng-href="#">Contact</a></li>
-          <li ng-show="$root.isLogged"><a href="" ng-click="logout()">Signout</a></li>
+          <li ng-show="isUserLogged"><a href="" ng-click="logout()">Signout</a></li>
         </ul>
         <h3 class="text-muted">TBCalendar</h3>
       </div>
@@ -82,18 +82,24 @@
     <script src="bower_components/fullcalendar/fullcalendar.js"></script>
     <script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
     <script src="bower_components/angular-ui-select/dist/select.js"></script>
+
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+
+        <!-- Controllers -->
         <script src="scripts/controllers/login-ctrl.js"></script>
         <script src="scripts/controllers/header-ctrl.js"></script>
         <script src="scripts/controllers/main-ctrl.js"></script>
         <script src="scripts/controllers/about-ctrl.js"></script>
         <script src="scripts/controllers/dashboard-ctrl.js"></script>
         <script src="scripts/controllers/create-event-ctrl.js"></script>
-    <script src="scripts/controllers/create-group-ctrl.js"></script>
+        <script src="scripts/controllers/create-group-ctrl.js"></script>
+        <script src="scripts/controllers/detail-event-ctrl.js"></script>
+
+        <!-- Services -->
         <script src="scripts/services/server-service.js"></script>
         <script src="scripts/services/group-service.js"></script>
         <script src="scripts/services/event-service.js"></script>

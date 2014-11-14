@@ -23,13 +23,8 @@ angular.module('frontendApp')
   */
   $scope.searchInput = '';
   $scope.searchResults = [];
-  group.getGroups()
-    .then( function(groups)
-      {
-        $scope.groups = groups;
-        $scope.putAllEvents($scope.groups);
-      });
 
+<<<<<<< HEAD
   notification.getNotifications()
     .success(function(data) {
       $log.log(data);
@@ -38,6 +33,17 @@ angular.module('frontendApp')
     .error(function(error) {
       $log.error(error);
     });
+=======
+
+  $scope.fetchAllGroups = function() {
+    group.getGroups()
+      .then( function(groups)
+        {
+          $scope.groups = groups;
+          $scope.putAllEvents($scope.groups);
+        });
+    };
+>>>>>>> 9bf44a4c9b1862aba30c4750c9798d84ebddd65d
 
     $scope.filter = function (group) {
       $scope.myCalendar.fullCalendar('removeEvents');
@@ -76,9 +82,7 @@ angular.module('frontendApp')
                 description: groups[group].events[event].description
 
               });
-
             }
-
         }
 
       $scope.events = $scope.myCalendar.fullCalendar('clientEvents');
@@ -128,4 +132,7 @@ angular.module('frontendApp')
     };
 
     $scope.eventSources = [];
+    $scope.fetchAllGroups();
+    notification.getNotifications();
+
   });
