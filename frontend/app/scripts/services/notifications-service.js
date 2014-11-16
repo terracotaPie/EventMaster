@@ -13,5 +13,14 @@ angular.module('frontendApp')
       };
       return $http(config);
     };
+    service.subscribeToEvent = function (id) {
+      var config = {
+        method: 'POST',
+        data: {'event_id':id},
+        url: SERVER_URL + '/user/subscriptions/events',
+        withCredentials: true
+      };
+      return $http(config);
+    };
     return service;
   });
