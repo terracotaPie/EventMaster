@@ -72,7 +72,9 @@ Fore more information on ui-calendar go to controller definition(script/dashboar
           <h4 class="modal-title" id="myModalLabel">Notification</h4>
         </div>
         <div class="modal-body">
-          {{notifications}}
+          <div class="list-group">
+            <a ng-repeat="notification in notifications" class="list-group-item">{{notification.name}} {{notification.remaining_time}}</a>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
