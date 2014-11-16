@@ -8,7 +8,7 @@
  * Controller of the frontendApp
  */
 angular.module('frontendApp')
-  .controller('DetailEventCtrl', function ($scope, $log, $routeParams, eventServer, group) {
+  .controller('DetailEventCtrl', function ($scope, $log, $routeParams, eventServer, group, notification) {
 
     //$scope.fetchEvent = function()
     //{
@@ -34,5 +34,14 @@ angular.module('frontendApp')
           }
         });
     };
+    $scope.subscribe = function () {
+      notification.subscribeToEvent($routeParams.id)
+        .success(function(data) {
+          alert('Subscribed')
+        })
+        .error(function(data) {
+          $log.log(data);
+        });
+    }
     $scope.fetchAllGroups();
   });
