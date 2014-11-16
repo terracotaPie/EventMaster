@@ -7,7 +7,7 @@
  */
 
 angular.module('frontendApp')
-  .controller('DashboardCtrl', function ($scope, $log, group, notification) {
+  .controller('DashboardCtrl', function ($scope, $log, group, notification, $location) {
 
   /*
       Fetching Groups from group-service.
@@ -63,6 +63,7 @@ angular.module('frontendApp')
                 $scope.groupsColors = $scope.colors;
               }
               $scope.myCalendar.fullCalendar( 'renderEvent', {
+                id:groups[group].events[event].id,
                 title:groups[group].events[event].name,
                 start:groups[group].events[event].time,
                 color:$scope.groupsColors[group],
@@ -115,6 +116,9 @@ angular.module('frontendApp')
           left: 'month basicWeek basicDay',
           center: 'title',
           right: 'today prev,next'
+        },
+        eventClick: function(calEvent) {
+          $location.path('/events/'+calEvent.id);
         }
       }
     };
@@ -128,5 +132,11 @@ angular.module('frontendApp')
       .error(function(data) {
         $log.log(data);
       });
+    //On event click in the calendar got to detail view
+    //$scope.myCalendar.fullCalendar({
+    //  eventClick: function(calEvent, jsEvent, view) {
+    //    alert('clicked');
+    //  }
+    //});
 
   });
