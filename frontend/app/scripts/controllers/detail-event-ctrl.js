@@ -37,11 +37,11 @@ angular.module('frontendApp')
     $scope.subscribe = function () {
       notification.subscribeToEvent($routeParams.id)
         .success(function(data) {
-          alert('Subscribed')
+          $log.log(data);
         })
         .error(function(data) {
           $log.log(data);
         });
-    }
+    };
     $scope.fetchAllGroups();
   });
