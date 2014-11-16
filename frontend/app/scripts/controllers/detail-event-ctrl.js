@@ -27,8 +27,7 @@ angular.module('frontendApp')
           $scope.groups = groups;
           for(var group in groups) {
             for(var event in groups[group].events) {
-              $
-              if(groups[group].events[event].id == $routeParams.id) {
+              if(groups[group].events[event].id === parseInt($routeParams.id)) {
                 $scope.event = groups[group].events[event];
               }
             }
