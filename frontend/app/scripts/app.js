@@ -50,7 +50,8 @@ angular
         controller: 'DetailEventCtrl'
       })
       .when('/landing', {
-        templateUrl: 'views/landing.html'
+        templateUrl: 'views/landing.html',
+        controller: 'LandingCtrl'
       })
       .otherwise({
         redirectTo: '/landing'

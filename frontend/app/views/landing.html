@@ -9,17 +9,24 @@
 		</div>
 
 		<div id="register">
-			<form role="form">
-				<h3 id="utmail">Register with your UTMail</h3>
-				<div class="form-group form-scale">
-					<input type="email" class="form-control input-lg form-scale" id="inputEmail" placeholder="Email">
-				</div>
-				<div class="form-group form-scale">
-					<input type="password" class="form-control input-lg form-scale" id="inputPassword" placeholder="Password">
-				</div>
-				<button type="submit" class="btn btn-lg register-button">Sign up</button>
-				<p id="login-link">Or log in <a href="#/login">here</a>.</p>
-			</form>
+
+      <h3 id="utmail">Register with your UTMail</h3>
+      <form method="post" ng-submit="signUp()" name="loginForm">
+        <div class="form-group has-feedbac form-scale">
+          <input class="form-control input-lg" type="text" name="email" ng-model="email" placeholder="Email" required autofocus>
+          <span class="ion-at form-control-feedback"></span>
+        </div>
+
+        <div class="form-group has-feedback form-scale">
+          <input class="form-control input-lg" type="password" name="password" ng-model="password" placeholder="Password" required>
+          <span class="ion-key form-control-feedback"></span>
+        </div>
+
+        <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-lg register-button">Sign Up</button>
+        <br />
+        <p id="login-link">Or log in <a href="#/login">here</a>.</p>
+        <div class="alert alert-danger" role="alert" ng-show="invalidUsername">Invalid Email</div>
+      </form>
 		</div>
 	</div>
 </section>
