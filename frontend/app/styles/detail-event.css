@@ -1,0 +1,16 @@
+/*
+	Stylesheet file for event details
+*/
+
+.details-panel {
+	width: 48%;
+	border-color: rgb(207, 217, 215);
+	border-radius: 2px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 17px;
+}
+
+.detail {
+	float: left;
+	width: 120px;
+	font-weight: bold;
+}

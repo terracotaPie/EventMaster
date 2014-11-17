@@ -1,34 +1,42 @@
 <div class="container">
   <div class="row">
-    <div class="center-form panel event-panel">
+    <div id="eventDetails" class="center-form details-panel">
         <div class="panel-body">
           <h2 class="text-center">Event Details</h2>
           <form method="post" ng-submit="eventDetails()" name="eventForm">
  			<div class="form-group has-feedback form-input">
-               <p>EVENT ID: {{event.id}}</p>
+               <p class="detail">EVENT ID:</p>
+               <p>{{event.id}}</p>
             </div>
             <div class="form-group has-feedback form-input">
-               <p>EVENT NAME: {{event.name}}</p>
+               <p class="detail">EVENT NAME:</p>
+               <p>{{event.name}}</p>
             </div>
 
             <div class="form-group has-feedback form-input">
-                <p>JSON DATE:  {{event.time}}</p>
+                <p class="detail">JSON DATE:</p>
+                <p>{{event.time}}</p>
             </div>
             <div class="form-group has-feedback form-input">
-                <p>DURATION:  {{event.duration}}</p>
+                <p class="detail">DURATION:</p>
+                <p>{{event.duration}}</p>
             </div>
             <div class="form-group has-feedback">
-              <p>DESCRIPTION:  {{event.description}}</p>
+              <p class="detail">DESCRIPTION:</p>
+              <p>{{event.description}}</p>
             </div>
             <div class="form-group has-feedback">
-              <p>REPEAT:  {{event.repeat}}</p>
+              <p class="detail">REPEAT:</p>
+              <p>{{event.repeat}}</p>
             </div>
            <div class="form-group has-feedback">
-              <p>REPEAT DAYS:  {{event.days}}</p>
+              <p class="detail">REPEAT DAYS:</p>
+              <p>{{event.days}}</p>
             </div>
 
             <div class="form-group has-feedback">
-              <p>TAGS:  {{event.tags}}</p>
+              <p class="detail">TAGS:</p>
+              <p>{{event.tags}}</p>
             </div>
             <button ng-click="subscribe()" type="button" class="btn btn-default" aria-label="Left Align">
     			<span class="glyphicon glyphicon-align-left" aria-hidden="true">Subscribe</span>
