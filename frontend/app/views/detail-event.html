@@ -1,7 +1,48 @@
-<div>
-  This is detailed event for specific event
-  {{event}}
-  <button ng-click="subscribe()" type="button" class="btn btn-default" aria-label="Left Align">
-    <span class="glyphicon glyphicon-align-left" aria-hidden="true">Subscribe</span>
-  </button>
+<div class="container">
+  <div class="row">
+    <div id="eventDetails" class="center-form details-panel">
+        <div class="panel-body">
+          <h2 class="text-center">Event Details</h2>
+          <form method="post" ng-submit="eventDetails()" name="eventForm">
+ 			<div class="form-group has-feedback form-input">
+               <p class="detail">EVENT ID:</p>
+               <p>{{event.id}}</p>
+            </div>
+            <div class="form-group has-feedback form-input">
+               <p class="detail">EVENT NAME:</p>
+               <p>{{event.name}}</p>
+            </div>
+
+            <div class="form-group has-feedback form-input">
+                <p class="detail">JSON DATE:</p>
+                <p>{{event.time}}</p>
+            </div>
+            <div class="form-group has-feedback form-input">
+                <p class="detail">DURATION:</p>
+                <p>{{event.duration}}</p>
+            </div>
+            <div class="form-group has-feedback">
+              <p class="detail">DESCRIPTION:</p>
+              <p>{{event.description}}</p>
+            </div>
+            <div class="form-group has-feedback">
+              <p class="detail">REPEAT:</p>
+              <p>{{event.repeat}}</p>
+            </div>
+           <div class="form-group has-feedback">
+              <p class="detail">REPEAT DAYS:</p>
+              <p>{{event.days}}</p>
+            </div>
+
+            <div class="form-group has-feedback">
+              <p class="detail">TAGS:</p>
+              <p>{{event.tags}}</p>
+            </div>
+            <button ng-click="subscribe()" type="button" class="btn btn-default" aria-label="Left Align">
+    			<span class="glyphicon glyphicon-align-left" aria-hidden="true">Subscribe</span>
+  			</button>
+          </form>
+        </div>
+    </div>
+  </div>
 </div>
