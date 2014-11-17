@@ -10,7 +10,7 @@ angular.module('frontendApp')
   .factory('auth', function($resource, $http, $log, $rootScope, $location, SERVER_URL) {
     var service = {};
 
-    service.login = function (user) 
+    service.login = function (user)
     {
             var config = {
                 method: 'POST',
@@ -21,16 +21,16 @@ angular.module('frontendApp')
             };
 
         $http(config)
-            .success(function(data) 
+            .success(function(data)
             {
-              if (data.indexOf('EMPTY SHIT') > -1) 
+              if (data.indexOf('EMPTY SHIT') > -1)
               {
                 $log.log('success');
                 $rootScope.isLogged = true;
                 $rootScope.currentUser = data;
                 $location.path('/dashboard');
-              } 
-              else 
+              }
+              else
               {
                 $log.log('fail');
                 $rootScope.isLogged = false;
@@ -39,7 +39,7 @@ angular.module('frontendApp')
         .error(function(error) {
           $log.error(error);
         });
-      
+
     };
 
     service.logout = function() {
@@ -61,6 +61,27 @@ angular.module('frontendApp')
             .error(function(error) {
               $log.error(error);
             });
+    };
+
+    service.signUp = function (user)
+    {
+      var config = {
+        method: 'POST',
+        url: SERVER_URL + '/user/register',
+        data: 'username=' + user.username + '&password=' + user.password + '&next=/user/sign-in',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+      };
+
+      $http(config)
+        .success(function(data)
+        {
+          $log.log('Account has been created');
+          $location.path('/login');
+        })
+        .error(function(error) {
+          $log.error(error);
+        });
+
     };
 
 
