@@ -1,7 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="center-form panel event-panel">
+        <div class="panel-body">
+          <h2 class="text-center">Event Details</h2>
+          <form method="post" ng-submit="eventDetails()" name="eventForm">
+ 			<div class="form-group has-feedback form-input">
+               <p>EVENT ID: {{event.id}}</p>
+            </div>
+            <div class="form-group has-feedback form-input">
+               <p>EVENT NAME: {{event.name}}</p>
+            </div>
+
+            <div class="form-group has-feedback form-input">
+                <p>JSON DATE:  {{event.time}}</p>
+            </div>
+            <div class="form-group has-feedback form-input">
+                <p>DURATION:  {{event.duration}}</p>
+            </div>
+            <div class="form-group has-feedback">
+              <p>DESCRIPTION:  {{event.description}}</p>
+            </div>
+            <div class="form-group has-feedback">
+              <p>REPEAT:  {{event.repeat}}</p>
+            </div>
+           <div class="form-group has-feedback">
+              <p>REPEAT DAYS:  {{event.days}}</p>
+            </div>
+
+            <div class="form-group has-feedback">
+              <p>TAGS:  {{event.tags}}</p>
+            </div>
+            <button ng-click="subscribe()" type="button" class="btn btn-default" aria-label="Left Align">
+    			<span class="glyphicon glyphicon-align-left" aria-hidden="true">Subscribe</span>
+  			</button>
+          </form>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
 <div>
-  This is detailed event for specific event
-  {{event}}
-  <button ng-click="subscribe()" type="button" class="btn btn-default" aria-label="Left Align">
-    <span class="glyphicon glyphicon-align-left" aria-hidden="true">Subscribe</span>
-  </button>
+ {{event}}
 </div>
