@@ -211,6 +211,15 @@ api.add_resource(UnreadNotifications, '/user/unread_notifications')
 
 db_adapter = SQLAlchemyAdapter(db,  User)
 
+@app.route('/logged-in')
+def loggedin():
+    return "SUCCESS"
+
+@app.route('/')
+def root():
+    return "EMPTY SHIT"
+
+
 # lol strong passwords
 user_manager = UserManager(db_adapter, app,
                            password_validator=lambda x, y: True,
