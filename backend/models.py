@@ -84,4 +84,5 @@ class Event(db.Model):
                 'tags': json.loads(self.tags),
                 'days': json.loads(self.days),
                 'repeat': self.repeat,
+                'score': len(self.users.count),
                 'duration': self.duration}
