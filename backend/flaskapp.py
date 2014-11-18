@@ -97,7 +97,7 @@ class GroupResource(Resource):
             return g.to_JSON()
 
 class EventResource(Resource):
-    def get(self, event_id):
+    def get(self, group_id, event_id):
         e = Event.query.get(event_id)
         if e is None:
             abort(404, message='Group {} not found'.format(event_id))
