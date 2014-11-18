@@ -22,7 +22,7 @@ app = Flask(__name__)
 app.config.from_object(__name__+'.ConfigClass')
 api = Api(app)
 db.init_app(app)
-cors = CORS(app)
+cors = CORS(app, supports_credentials=True, send_wildcard=False)
 
 filehander = RotatingFileHandler('debug.log')
 filehander.setLevel(logging.INFO)
@@ -95,6 +95,14 @@ class GroupResource(Resource):
             abort(404, message='Group {} not found'.format(group_id))
         else:
             return g.to_JSON()
+
+class EventResource(Resource):
+    def get(self, event_id):
+        e = Event.query.get(event_id)
+        if e is None:
+            abort(404, message='Group {} not found'.format(event_id))
+        else:
+            return e.to_JSON()
 
 
 class EventList(Resource):
@@ -176,15 +184,19 @@ class UnreadNotifications(Resource):
     decorators = [login_required]
 
     def get(self):
-        rj = request.get_json()
         all_events = current_user.events
 
         notifications = []
         for e in all_events:
             remaining_time = e.time - datetime.datetime.now()
             offset = 10000
-            if(remaining_time > datetime.timedelta() and (remaining_time < datetime.timedelta(hours=offset))):
-                notifications.append({'name': e.name, 'description': e.description, 'remaining_time': str((remaining_time.seconds // 60)) + 'h'})
+            if(remaining_time > datetime.timedelta() and
+                    (remaining_time < datetime.timedelta(hours=offset))):
+                notifications.append({'name': e.name,
+                                      'description': e.description,
+                                      'remaining_time':
+                                      str((remaining_time.seconds // 60)) + 'm'}
+                                    )
 
         return notifications
 
@@ -192,6 +204,7 @@ class UnreadNotifications(Resource):
 api.add_resource(GroupList, '/groups')
 api.add_resource(GroupResource, '/groups/<int:group_id>')
 api.add_resource(EventList, '/groups/<int:group_id>/events')
+api.add_resource(EventResource, '/groups/<int:group_id>/events/<int:event_id>')
 api.add_resource(SubscriptionList, '/user/subscriptions/events')
 api.add_resource(SubscriptionListGroups, '/user/subscriptions/groups')
 api.add_resource(UnreadNotifications, '/user/unread_notifications')
@@ -200,7 +213,8 @@ db_adapter = SQLAlchemyAdapter(db,  User)
 
 # lol strong passwords
 user_manager = UserManager(db_adapter, app,
-                           password_validator=lambda x, y: True)
+                           password_validator=lambda x, y: True,
+                           username_validator=lambda x, y: True)
 # Start development web server
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=20300, debug=True)
