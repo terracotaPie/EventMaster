@@ -38,9 +38,14 @@
               <p class="detail">TAGS:</p>
               <p>{{event.tags}}</p>
             </div>
-            <button ng-click="subscribe()" type="button" class="btn btn-lg btn-block btn-success" aria-label="Left Align">
-    			<span class="glyphicon glyphicon-align-left" aria-hidden="true">Subscribe</span>
-  			</button>
+            <div class="eventButtons">
+	            <button ng-click="subscribe()" type="button" class="btn btn-lg btn-success btn-sub" aria-label="Left Align">
+    				<span class="glyphicon glyphicon-align-left" aria-hidden="true">Subscribe</span>
+  				</button>
+  				<button ng-click="delete()" type="button" class="btn btn-lg btn-success btn-del" aria-label="Left Align">
+    				Delete
+  				</button>
+  			</div>
           </form>
         </div>
     </div>
