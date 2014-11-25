@@ -1,0 +1,23 @@
+<h1>Events</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr ng-repeat="event in eventList">
+        <td>{{event.name}}</td>
+        <td>{{event.description}}</td>
+        <td>{{event.score}}</td>
+        <td>
+<button class="btn btn-sm btn-success">Subscribe</button>
+        </td>
+        <td>
+<button class="btn btn-sm btn-danger">Delete</button>
+        </td>
+      </tr>
+  </tbody>
+</table>
