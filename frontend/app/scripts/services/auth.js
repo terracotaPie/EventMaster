@@ -75,6 +75,7 @@ angular.module('frontendApp')
       $http(config)
         .success(function(data)
         {
+          $log.log(data);
           $log.log('Account has been created');
           $location.path('/login');
         })

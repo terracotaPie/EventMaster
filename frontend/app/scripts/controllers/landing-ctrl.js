@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('frontendApp')
   .controller('LandingCtrl', function ($scope, $location, auth) {
 
@@ -17,5 +19,5 @@ angular.module('frontendApp')
       {
         $scope.invalidUsername = true;
       }
-    };;
+    };
   });

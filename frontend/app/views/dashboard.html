@@ -42,26 +42,12 @@ Fore more information on ui-calendar go to controller definition(script/dashboar
             <li data-ng-class='{active:isActive("All")}'>
               <a ng-click="putAllEvents(groups);makeActive('All')">All</a>
             </li>
-            <li ng-repeat="group in groups" data-ng-class='{active:isActive(group.name)}'>
+            <li ng-repeat="group in groups" data-ng-class='{active:isActive(group.name)}' class="selectable">
               <a ng-click="filter(group);makeActive(group.name)" class="group-name-text">
                 {{group.name}}
               </a>
             </li>
         </ul>
-        <p>Selected: {{group.selected.name}}</p>
-        <ui-select ng-model="group.selected"
-             theme="bootstrap"
-             ng-disabled="disabled"
-             style="width: 110px;">
-		    <ui-select-match placeholder="Add Group"><div ng-click="test()">{{$select.selected.name}}</div></ui-select-match>
-		    <ui-select-choices repeat="group in groups | filter: $select.search" refresh-delay="0">
-		      <div ng-bind-html="group.name | highlight: $select.search"></div>
-		    </ui-select-choices>
-  </ui-select>
-  <p style="text-align:center; margin-top:10px">
-  <button type="button" class="btn btn-default btn-xs" ng-click="addGroup()"><span class="glyphicon glyphicon-plus"></span> Add</button>
-  </p>
-
     </div>
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

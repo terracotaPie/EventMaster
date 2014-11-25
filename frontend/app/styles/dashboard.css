@@ -1,5 +1,10 @@
 /*=======Notification CSS======*/
 
+
+.selectable {
+  cursor: pointer;
+}
+
 .notification-button-container {
 	float: right !important;
 }
@@ -28,7 +33,7 @@
   position: relative;
   font-size: 8px;
   color: white;
-  bottom: 5.5px;
+  bottom: 6.5px;
 }
 
 
