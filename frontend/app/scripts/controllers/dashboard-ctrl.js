@@ -41,6 +41,7 @@ angular.module('frontendApp')
       for(var event in group.events) {
         var d = new Date(group.events[event].time);
         $scope.myCalendar.fullCalendar( 'renderEvent', {
+          id:group.events[event].id,
           title:group.events[event].name,
           start:group.events[event].time,
           color:c,
@@ -69,7 +70,6 @@ angular.module('frontendApp')
                 color:$scope.groupsColors[group],
                 end: d.toJSON(),
                 description: groups[group].events[event].description
-
               });
             }
         }
