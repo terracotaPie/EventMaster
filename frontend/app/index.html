@@ -35,7 +35,8 @@
         <ul class="nav nav-pills pull-right">
           <li><a ng-href="#/login">Login</a></li>
           <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#/dashboard">Dashboard</a></li>
+          <li ng-show="isUserLogged"><a ng-href="#/dashboard">Dashboard</a></li>
+          <li ng-show="isUserLogged"><a ng-href="/#/event-list">Event List</a></li>
           <li><a ng-href="#">Contact</a></li>
           <li ng-show="isUserLogged"><a href="" ng-click="logout()">Signout</a></li>
         </ul>
@@ -89,6 +90,14 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
 
+        <!-- Services -->
+        <script src="scripts/services/server-service.js"></script>
+        <script src="scripts/services/group-service.js"></script>
+        <script src="scripts/services/event-service.js"></script>
+        <script src="scripts/services/auth.js"></script>
+        <script src="scripts/services/notifications-service.js" charset="utf-8"></script>
+
+
         <!-- Controllers -->
         <script src="scripts/controllers/login-ctrl.js"></script>
         <script src="scripts/controllers/header-ctrl.js"></script>
@@ -99,13 +108,8 @@
         <script src="scripts/controllers/create-group-ctrl.js"></script>
         <script src="scripts/controllers/detail-event-ctrl.js"></script>
         <script src="scripts/controllers/landing-ctrl.js"></script>
+        <script src="scripts/controllers/event-list-ctrl.js"></script>
 
-        <!-- Services -->
-        <script src="scripts/services/server-service.js"></script>
-        <script src="scripts/services/group-service.js"></script>
-        <script src="scripts/services/event-service.js"></script>
-        <script src="scripts/services/auth.js"></script>
-        <script src="scripts/services/notifications-service.js" charset="utf-8"></script>
         <!-- endbuild -->
 
 
