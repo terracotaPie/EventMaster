@@ -44,7 +44,7 @@ angular.module('frontendApp')
           id:group.events[event].id,
           title:group.events[event].name,
           start:group.events[event].time,
-          color:c,
+          color:group.events[event].color,
           end: d.toJSON(),
           description: group.events[event].description
         });
@@ -71,6 +71,7 @@ angular.module('frontendApp')
                 end: d.toJSON(),
                 description: groups[group].events[event].description
               });
+              groups[group].events[event].color = $scope.groupsColors[group];
             }
         }
 
