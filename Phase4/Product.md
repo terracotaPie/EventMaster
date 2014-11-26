@@ -26,7 +26,7 @@ This is a typical series of steps a user would go through:
 ## What Makes Our Product Unique
 What makes our product unique is the fact that the events can be confirmed or disproved by others, allowing you to leverage information and knowledge from all of the people in the class, improving the overall reliability of the events. Another thing that makes it unique is the fact that you can only sign up using an @mail.utoronto.ca email, limiting it only to UofT students, ensuring that the people contributing are actual relevant students. In theory, this could be expanded to allow different types of email addresses specific to other schools, and the app itself would be limited to only users from those sets of emails.
 
-## What we chose to Keep and Remove
+## What We Chose to Keep and Remove
 The easiest way to see what we decided to remove is to compare the features described above with the list in our [Phase 1 plan](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/blob/master/Phase1/Project%20Deliverables.md). Other than what was mentioned, the following features were removed:
  * Being able to see study tips from other users
  * Profs having any involvement in the process (we realize it would have been a good idea, we just didn't have time to implement it, and it complicated everything else about the usage flow of the project)
