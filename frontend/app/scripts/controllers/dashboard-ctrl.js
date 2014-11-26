@@ -131,11 +131,4 @@ angular.module('frontendApp')
       .error(function(data) {
         $log.log(data);
       });
-    //On event click in the calendar got to detail view
-    //$scope.myCalendar.fullCalendar({
-    //  eventClick: function(calEvent, jsEvent, view) {
-    //    alert('clicked');
-    //  }
-    //});
-
   });
