@@ -19,15 +19,26 @@ angular.module('frontendApp')
     group.getGroups()
       .then( function(groups)
         {
-          $log.log(groups);
           groups.forEach(function(group) {
             group.events.forEach(function(event) {
               $scope.eventList.push(event);
             });
           });
-          $log.log($scope.eventList);
+          $scope.eventList.sort(compare);
         });
     };
+
+    function compare(a, b) {
+        if (a.score < b.score) 
+        {
+           return 1;
+         }
+        if (a.score > b.score)
+        {
+          return -1;
+        }
+        return 0;
+      }
 
     $scope.fetchAllGroups();
 
