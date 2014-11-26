@@ -35,7 +35,7 @@ angular.module('frontendApp')
     $scope.createEvent = function()
     {
       if($scope.mytime === undefined || $scope.dt === undefined) {
-        $log.log("Choose time/date");
+        $log.log('Choose time/date');
         return;
       }
       $scope.dt.setMinutes($scope.mytime.getMinutes());

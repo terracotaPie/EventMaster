@@ -32,7 +32,7 @@
     <!-- Add your site or application content here -->
       <div ng-controller="HeaderCtrl" class="header">
         <ul class="nav nav-pills pull-right">
-          <li><a ng-href="#/login">Login</a></li>
+          <li ng-hide="isUserLogged"><a ng-href="#/login">Login</a></li>
           <li><a ng-href="#/about">About</a></li>
           <li ng-show="isUserLogged"><a ng-href="#/dashboard">Dashboard</a></li>
           <li ng-show="isUserLogged"><a ng-href="/#/event-list">Event List</a></li>
