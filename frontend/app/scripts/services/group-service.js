@@ -7,7 +7,7 @@
 
 angular.module('frontendApp')
 
-  .factory('group', function($resource, $q, $log,server) {
+  .factory('group', function($resource, $q, $log, server, SERVER_URL, $http) {
   	var service = {};
 
   	/* Getting a group */
@@ -23,6 +23,16 @@ angular.module('frontendApp')
 		          throw error;
 		      });
   	};
+
+    service.getSubscriptions = function () {
+      var config = {
+        method: 'GET',
+        url: SERVER_URL + '/user/subscriptions/events',
+        withCredentials: true
+      };
+
+      return $http(config);
+    };
 
   	/* Creating a group */
   	service.setGroup = function (newGroup) {
