@@ -77,6 +77,29 @@ angular.module('frontendApp')
       $scope.events = $scope.myCalendar.fullCalendar('clientEvents');
     };
 
+    $scope.putSubscriptions = function (){
+      group.getSubscriptions()
+        .success(function(data) {
+          $scope.myCalendar.fullCalendar('removeEvents');
+          for(var event in data) {
+            var d = new Date(data[event].time);
+            d.setMinutes(d.getMinutes() + data[event].duration);
+            $scope.myCalendar.fullCalendar( 'renderEvent', {
+              id:data[event].id,
+              title:data[event].name,
+              start:data[event].time,
+              color:$scope.groupsColors[0],
+              end: d.toJSON(),
+              description: data[event].description,
+              score: data.score
+            });
+          }
+        })
+        .error(function(error) {
+          $log.error(error);
+        });
+    };
+
     $scope.makeActive = function (content) {
       $scope.activeMenu = content;
     };
