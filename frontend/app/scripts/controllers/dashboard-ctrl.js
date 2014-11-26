@@ -23,6 +23,15 @@ angular.module('frontendApp')
   $scope.searchInput = '';
   $scope.searchResults = [];
 
+  /*
+    Initiate time steps for timepicker
+   */
+  $scope.hstep = 1;
+  $scope.mstep = 15;
+  $scope.changed = function () {
+    $log.log('Time changed to: ' + $scope.mytime);
+  };
+
   $scope.fetchAllGroups = function() {
     group.getGroups()
       .then( function(groups)

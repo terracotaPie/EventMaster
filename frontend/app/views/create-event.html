@@ -11,12 +11,22 @@
               <input class="form-control input-lg" type="text" name="name" ng-model="eventName" placeholder="Event Name" required>
             </div>
 
+
+            <div class='event-options'>
+                <p>Time</p>
+            </div>
+            <timepicker ng-model="mytime">
+            </timepicker>
+
             <div class="form-group has-feedback form-input">
               <div class='event-options'>
-                <p>JSON DATE</p>
+                <p>DATE</p>
               </div>
-              <input class="form-control input-lg time" type="text" name="time" ng-model="startTime" placeholder="Start Time" required>
+              <datepicker ng-model="dt"
+                          show-weeks="true"
+                          class="well well-sm"></datepicker>
             </div>
+
 
             <div class="form-group has-feedback form-input">
               <div class='event-options'>
