@@ -35,8 +35,6 @@ angular.module('frontendApp')
 
     $scope.filter = function (group) {
       $scope.myCalendar.fullCalendar('removeEvents');
-      var c = 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
-      $scope.groupsColors.splice($scope.groups.indexOf(group), 1, c);
 
       for(var event in group.events) {
         var d = new Date(group.events[event].time);
@@ -69,7 +67,7 @@ angular.module('frontendApp')
                 start:groups[group].events[event].time,
                 color:$scope.groupsColors[group],
                 end: d.toJSON(),
-                description: groups[group].events[event].description
+                description: '<br>' + groups[group].events[event].description
               });
               groups[group].events[event].color = $scope.groupsColors[group];
             }
