@@ -11,7 +11,7 @@
 
 .notification-button-container button {
 	display: inline;
-	width: 135%;
+	width: 100%;
 }
 
 .notification-button-container button a{
@@ -41,4 +41,8 @@
 .group-name-text {
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.top-container {
+  margin-top: 30px;
 }

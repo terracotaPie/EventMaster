@@ -1,63 +1,10 @@
-﻿.center {
-	margin-left: auto;
-	margin-right: auto;
-	width: 1000px;
-	transform: translateX(-135px);
-}
-
-/* Formatting for main section */
-#main {
-	height: 360px;
-	width: 100%;
-	margin-top: -380px;
-	margin-bottom: 90px;
-}
-#bg {
-	/* stupid bg position override */
-	margin-top: -44px;
-	margin-left: -610px;
-	padding-top: 44px;
-	padding-left: 610px;
-	width: 1920px;
-	height: 410px;
-	background-image: url("../images/landing.png");
-}
-
-/* Text on the left of main */
-#organized {
-	width: 420px;
-	text-align: center;
-	text-shadow: 0px 0px 16px black;
-	color: #eeeeee;
-	float: left;
-	margin-left: 50px;
-	margin-top: 107px;
-}
-#organized-text {
-	font-size: 3.5em;
-	margin: 0px;
-}
-
-/* Registration/login on the right of main */
-#register {
-	width: 400px;
-	height: 250px;
-	-moz-border-radius: 30px;
-	border-radius: 30px;
-	background-color: rgba(0, 0, 0, 0.5);
-	text-align: center;
-	text-shadow: 0px 0px 16px black;
-	float: right;
-	margin-right: 75px;
-	margin-top: 50px;
-}
+﻿/* Registration/login on the right of main */
 .form-scale {
 	width: 314px;
 	margin: 10px auto 10px auto;
 }
 .register-button {
-	float: left;
-	margin-left: 43px;
+	cursor: pointer;
 	margin-top: 6px;
 	width: 150px;
 }
@@ -66,9 +13,7 @@
 	color: white;
 }
 #login-link {
-	transform: translateY(21px);
-	float: right;
-	margin-right: 80px;
+	margin-top: 30px;
 	color: white;
 }
 
@@ -90,4 +35,78 @@
 .right {
 	float: right;
 	text-align: left;
+}
+
+::-webkit-input-placeholder {
+   color: rgba(255, 255, 255, 0.9) !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba(255, 255, 255, 0.9) !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(255, 255, 255, 0.9) !important;
+}
+
+:-ms-input-placeholder {  
+   color: rgba(255, 255, 255, 0.9) !important;
+}
+
+h1 {
+	font-size: 3.75rem;
+	line-height: 5rem;
+}
+
+.intro-section {
+	margin-top: 110px;
+}
+
+
+h4 {
+line-height: 1.875rem;
+}
+
+.background {
+	background-image: url("http://templateocean.com/stamp/geometric-polygon-bg/2-home-style-two/images/background-images/gp-blue.jpg");
+}
+
+.overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding-top: 84px;
+	padding-bottom: 175px;
+	height: auto;
+}
+h1 {
+	color: white;
+}
+
+.white-text {
+	color:white;
+}
+.center-text {
+	text-align: center;
+}
+
+.input-custom {
+	border:0;
+	border-bottom: 1px solid white;
+	background: transparent;
+	color: rgba(255, 255, 255, 1);
+}
+
+.input-custom:focus {
+	border:0;
+	border-bottom: 1px solid white;
+	box-shadow: 0, 0, 0, 0 white;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 8px rgba(102, 175, 233, 0);
+	
+}
+
+.form-control:focus {
+	-webkit-box-shadow: 0,0,0,0;
+}
+
+img {
+	box-shadow: 1px 1px 25px 1px rgb(132, 132, 132)
 }
