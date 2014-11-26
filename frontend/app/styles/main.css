@@ -77,6 +77,10 @@ body {
   margin-left: 50px;
 }
 
+.logo a:hover {
+  text-decoration: none;
+}
+
 
 /*Animation*/
 
