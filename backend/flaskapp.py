@@ -173,6 +173,13 @@ class SubscriptionList(Resource):
         else:
             abort(400, message='Missing key event_id in keys {}'.format(rj.keys()))
 
+    def delete(self):
+        rj = request.get_json()
+        if 'event_id' in rj.keys():
+            current_user.events.remove(current_user.events.filter(Event.id==rj['event_id']).one())
+            db.session.commit()
+            return {'message': 'success'}
+
 
 class SubscriptionListGroups(Resource):
     decorators = [login_required]
