@@ -8,10 +8,13 @@
 
 angular.module('frontendApp')
   .controller('DashboardCtrl', function ($scope, $log, group, notification, $location) {
+    $(function ()
+    { $("#example").popover();
+    });
 
-  /*
-      Fetching Groups from group-service.
-  */
+    /*
+        Fetching Groups from group-service.
+    */
   $scope.group = {};
   $scope.events = [];
   $scope.activeMenu = 'All';
@@ -44,7 +47,8 @@ angular.module('frontendApp')
           start:group.events[event].time,
           color:group.events[event].color,
           end: d.toJSON(),
-          description: group.events[event].description
+          description: group.events[event].description,
+          score: group.events[event].score
         });
       }
       $scope.events = $scope.myCalendar.fullCalendar('clientEvents');
@@ -67,7 +71,8 @@ angular.module('frontendApp')
                 start:groups[group].events[event].time,
                 color:$scope.groupsColors[group],
                 end: d.toJSON(),
-                description: '<br>' + groups[group].events[event].description
+                description: groups[group].events[event].description,
+                score: groups[group].events[event].score
               });
               groups[group].events[event].color = $scope.groupsColors[group];
             }
@@ -118,6 +123,12 @@ angular.module('frontendApp')
         },
         eventClick: function(calEvent) {
           $location.path('/events/'+calEvent.id);
+        },
+        eventRender: function(event, element) {
+          element[0].setAttribute('class',element[0].getAttribute('class') + ' custom-popover');
+          element[0].setAttribute('data-content','Event Score: ' + event.score);
+          element[0].setAttribute('data-trigger','hover');
+          $(".custom-popover").popover({ trigger: 'hover' });
         }
       }
     };
