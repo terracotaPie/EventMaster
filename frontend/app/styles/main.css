@@ -76,3 +76,41 @@ body {
   color:rgb(46, 104, 161);
   margin-left: 50px;
 }
+
+
+/*Animation*/
+
+.fadeZoom.ng-enter {
+  -webkit-animation-name: fadeIn, zoomIn;
+  -webkit-animation-duration: 0.8s;
+  animation-name: fadeIn, zoomIn;
+  animation-duration: 0.8s;
+   -webkit-animation-delay: 0.2s; /* Chrome, Safari, Opera */
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
