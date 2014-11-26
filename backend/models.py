@@ -22,7 +22,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(50), nullable=False, unique=True)
     password = db.Column(db.String(255), nullable=False, default='')
     events = db.relationship('Event', secondary=user_event,
-            backref=db.backref('users', lazy='dynamic'))
+            backref=db.backref('users', lazy='dynamic'), lazy='dynamic')
     groups = db.relationship('Group', secondary=user_group,
             backref=db.backref('users', lazy='dynamic'))
 
