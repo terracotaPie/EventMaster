@@ -30,7 +30,6 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
       <div ng-controller="HeaderCtrl" class="header">
         <ul class="nav nav-pills pull-right">
           <li><a ng-href="#/login">Login</a></li>
@@ -40,15 +39,14 @@
           <li><a ng-href="#">Contact</a></li>
           <li ng-show="isUserLogged"><a href="" ng-click="logout()">Signout</a></li>
         </ul>
-        <h3 class="text-muted">TBCalendar</h3>
+        <h3 class="text-muted logo">TBCalendar</h3>
       </div>
 
-      <div ng-view=""></div>
+      <div class="fadeZoom" ng-view=""></div>
 
-      <div class="footer">
+      <div class="footer text-center">
         <p><span class="glyphicon glyphicon-heart"></span> from the team 12</p>
       </div>
-    </div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

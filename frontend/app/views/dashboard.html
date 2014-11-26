@@ -1,76 +1,79 @@
 <!--
 Fore more information on ui-calendar go to controller definition(script/dashboard.js)
 -->
-
-<div class="row">
-  <div class="col-xs-6">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Search" ng-model="searchInput" ng-change="search()">
-    </div>
-      <div class="list-group">
-        <a ng-repeat="result in searchResults" ng-model="searchResults" href="#" class="list-group-item">
-          <h4 class="list-group-item-heading">{{result.title}}</h4>
-          <p class="list-group-item-text">{{result.description}}</p>
-        </a>
-      </div>
-    </div>
-    <div class="col-xs-2">
-      <button type="button" class="btn btn-default">
-        <a href="/#/create-event">Create event</a>
-      </button>
-    </div>
-    <div class="col-xs-2">
-      <button type="button" class="btn btn-default">
-        <a href="/#/create-group">Create group</a>
-      </button>
-    </div>
-    <div class="col-xs-2 notification-button-container">
-      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
-        <a href="">
-          <span>Notifications</span>
-        </a>
-        <div class="notification-container" onclick="">
-          <span class="notification-count">{{notifications.length}}</span>
+<div class="top-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" ng-model="searchInput" ng-change="search()">
         </div>
-      </button>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-xs-2">
-        <ul class="nav nav-pills nav-stacked">
-            <li data-ng-class='{active:isActive("All")}'>
-              <a ng-click="putAllEvents(groups);makeActive('All')">All</a>
-            </li>
-          <li data-ng-class='{active:isActive("subs")}'>
-            <a ng-click="putSubscriptions();makeActive('subs')">Subscribed</a>
-          </li>
-            <li ng-repeat="group in groups" data-ng-class='{active:isActive(group.name)}' class="selectable">
-              <a ng-click="filter(group);makeActive(group.name)" class="group-name-text">
-                {{group.name}}
-              </a>
-            </li>
-
-        </ul>
-    </div>
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="myModalLabel">Notification</h4>
-        </div>
-        <div class="modal-body">
           <div class="list-group">
-            <a ng-repeat="notification in notifications" class="list-group-item">{{notification.name}} {{notification.remaining_time}}</a>
+            <a ng-repeat="result in searchResults" ng-model="searchResults" href="#" class="list-group-item">
+              <h4 class="list-group-item-heading">{{result.title}}</h4>
+              <p class="list-group-item-text">{{result.description}}</p>
+            </a>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <div class="col-xs-2">
+          <button type="button" class="btn btn-default">
+            <a href="/#/create-event">Create event</a>
+          </button>
+        </div>
+        <div class="col-xs-2">
+          <button type="button" class="btn btn-default">
+            <a href="/#/create-group">Create group</a>
+          </button>
+        </div>
+        <div class="col-xs-2 notification-button-container">
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+            <a href="">
+              <span>Notifications</span>
+            </a>
+            <div class="notification-container" onclick="">
+              <span class="notification-count">{{notifications.length}}</span>
+            </div>
+          </button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-2">
+            <ul class="nav nav-pills nav-stacked">
+                <li data-ng-class='{active:isActive("All")}'>
+                  <a ng-click="putAllEvents(groups);makeActive('All')">All</a>
+                </li>
+              <li data-ng-class='{active:isActive("subs")}'>
+                <a ng-click="putSubscriptions();makeActive('subs')">Subscribed</a>
+              </li>
+                <li ng-repeat="group in groups" data-ng-class='{active:isActive(group.name)}' class="selectable">
+                  <a ng-click="filter(group);makeActive(group.name)" class="group-name-text">
+                    {{group.name}}
+                  </a>
+                </li>
+
+            </ul>
+        </div>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel">Notification</h4>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+                <a ng-repeat="notification in notifications" class="list-group-item">{{notification.name}} {{notification.remaining_time}}</a>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
+        <div class="col-xs-10" ui-calendar="uiConfig.calendar" calendar="myCalendar" ng-model="eventSources"></div>
     </div>
   </div>
-    <div class="col-xs-10" ui-calendar="uiConfig.calendar" calendar="myCalendar" ng-model="eventSources"></div>
 </div>
