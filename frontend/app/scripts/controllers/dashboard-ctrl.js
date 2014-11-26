@@ -17,6 +17,9 @@ angular.module('frontendApp')
   $scope.colors = ['#00A0B0','#6A4A3C','#CC333F','#EB6841','#EDC951'];
   $scope.groupsColors = [];
   $scope.notifications = [];
+  $scope.filtered = {};
+  $scope.filtered.events = [];
+
   /*
     Store search input and results for this search
   */
@@ -43,10 +46,9 @@ angular.module('frontendApp')
 
     $scope.filter = function (group) {
       $scope.myCalendar.fullCalendar('removeEvents');
-
       for(var event in group.events) {
         var d = new Date(group.events[event].time);
-        $scope.myCalendar.fullCalendar( 'renderEvent', {
+        var obj = {
           id:group.events[event].id,
           title:group.events[event].name,
           start:group.events[event].time,
@@ -54,7 +56,9 @@ angular.module('frontendApp')
           end: d.toJSON(),
           description: group.events[event].description,
           score: group.events[event].score
-        });
+        };
+        $scope.filtered.events.push(obj);
+        $scope.myCalendar.fullCalendar( 'renderEvent', obj);
       }
       $scope.events = $scope.myCalendar.fullCalendar('clientEvents');
     };
@@ -157,6 +161,17 @@ angular.module('frontendApp')
           element[0].setAttribute('data-content','Event Score: ' + event.score);
           element[0].setAttribute('data-trigger','hover');
           $('.custom-popover').popover({ trigger: 'hover' });
+        },
+        viewRender: function(view,element) {
+          if($scope.isActive('All')) {
+            $scope.putAllEvents($scope.groups);
+          } else if($scope.isActive('subs')) {
+            $scope.putSubscriptions();
+          } else {
+            var group = {};
+            group.events = $scope.events;
+            $scope.filter(group);
+          }
         }
       }
     };
