@@ -1,5 +1,5 @@
 'use strict';
-
+/*global $:false */
 /*
   - DashBoard controller
   - Calls calender service
@@ -8,10 +8,6 @@
 
 angular.module('frontendApp')
   .controller('DashboardCtrl', function ($scope, $log, group, notification, $location) {
-    $(function ()
-    { $("#example").popover();
-    });
-
     /*
         Fetching Groups from group-service.
     */
@@ -128,7 +124,7 @@ angular.module('frontendApp')
           element[0].setAttribute('class',element[0].getAttribute('class') + ' custom-popover');
           element[0].setAttribute('data-content','Event Score: ' + event.score);
           element[0].setAttribute('data-trigger','hover');
-          $(".custom-popover").popover({ trigger: 'hover' });
+          $('.custom-popover').popover({ trigger: 'hover' });
         }
       }
     };
