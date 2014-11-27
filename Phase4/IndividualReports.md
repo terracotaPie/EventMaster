@@ -71,7 +71,8 @@ Nonetheless, I am happy with the overall effort put in by the team.
 
 TODO: Fill in the report
  * My most significant contrubution was the design the the front page of our web app in general
- * While working on our web app, I learned about scrum, and tools like trello and slack (https://trello.com/) (https://slack.com/)
+ * While working on our web app, I learned about scrum, tools like trello and slack (https://trello.com/) (https://slack.com/), and learning to use bootstrap, which can create good loking layouts (http://getbootstrap.com/)
+ * My main contributions to the project were helping design the app layout. Even without having a lot of prigraming skill, I manage to help develop clean layouts, and to use bootstrap and photoshop to design and create a good user experience.
 
 ----
 
