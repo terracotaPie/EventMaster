@@ -33,7 +33,6 @@
       <div ng-controller="HeaderCtrl" class="header">
         <ul class="nav nav-pills pull-right">
           <li ng-hide="isUserLogged"><a ng-href="#/login">Login</a></li>
-          <li><a ng-href="#/about">About</a></li>
           <li ng-show="isUserLogged"><a ng-href="#/dashboard">Dashboard</a></li>
           <li ng-show="isUserLogged"><a ng-href="/#/event-list">Event List</a></li>
           <li><a ng-href="#">Contact</a></li>
@@ -64,17 +63,11 @@
        ga('send', 'pageview');
     </script>
 
-    <!-- build:js(.) scripts/oldieshim.js -->
-    <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
-    <![endif]-->
-    <!-- endbuild -->
-
-    <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
