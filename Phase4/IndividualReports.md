@@ -87,7 +87,13 @@ TODO: Fill in the report
 
 ## kitsunemimi
 
-TODO: Fill in the report
-
+ * My most significant contribution was the design and implementation of the landing page:
+    https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/75a9cb713571374f8d2e51259d8f56f730d3cf4d
+    https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/4af3b890b96177e75c403ff316ba400b3d5aba26
+    https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/da18dccbfad7f127df67dc061c8b3008abf13035
+    https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/74e4fd1df08bb67e16e24f7993f37ccf8fb8fd4f
+ * I basically learned html in a couple of days. I learned that sometimes it's difficult to work within the constraints of a styled site and that making an individual page with unique styling will require some workarounds to avoid messing up other pages. I also learned about the nuances with bower/grunt and that it's pretty powerful for building web apps smoothly.
+ * My main strengths lie in general and applied design. I helped with the overall design direction for the project along with Tales during the initial phases of the project, and I contributed entirely to the design of the landing page.
+ * I generally don't cope very well with modifying and adjusting other people's code and I fell behind in the project quickly after it started moving in Phase 2 without any code of my own. This problem could be averted if the project requirements had enough breadth for everyone to occupy their own domain, or I could use some more experience with coding in a group environment.
 
 ----
