@@ -12,10 +12,12 @@
 
 ----
 
-## inve1
+## Marco Monaco (inve1)
 
-TODO: Fill in the report
-
+* Main contribution: Designed and implemented most of the back end. See this [Commit](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/f75af7b8488f945a9378053bea57d52e3c3dea90) , and a few [subsequent](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commits/master/backend/flaskapp.py) ones on flaskapp.py and models.py
+* Technical concept: Had not worked first hand with CORS before. Quite simple to set up, much more convenient than JSONP
+* Strengths: Good experience on backend services and server administration allowed me to design a usable API and database models quickly so the frontend guys could use it early in the project. Hosted the backend on one of my servers so they wouldn't have to setup a flask environment
+* Weakness: Was not able to attend all meetings, mostly because I'm working full time, although I made to most of them.
 
 ----
 
