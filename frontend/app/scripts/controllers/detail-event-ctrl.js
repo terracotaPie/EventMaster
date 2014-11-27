@@ -10,16 +10,6 @@
 angular.module('frontendApp')
   .controller('DetailEventCtrl', function ($scope, $log, $routeParams, eventServer, group, notification) {
 
-    //$scope.fetchEvent = function()
-    //{
-    //  eventServer.get({id: $routeParams.id})
-    //  .$promise
-    //  .then(function(fetchedEvent) {
-    //    $log.log(fetchedEvent);
-    //  })
-    //  .then(null, $log.error);
-    //};
-
     $scope.fetchAllGroups = function() {
       group.getGroups()
         .then( function(groups)

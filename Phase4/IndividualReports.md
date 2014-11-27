@@ -43,7 +43,24 @@ TODO: Fill in the report
 
 ## cadz7
 
-TODO: Fill in the report
+My most significant contributions were:  
+
+* Implementation of Events list where user can subscribe/un-subscribe to events  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/2cd881482d87fa26a56154a8c1df48f62b0cc2c1
+* Setting up the event details view and refactoring code:  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/fd3778c173f53bbbef94b0cf136580c328ddef3a  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/818a5e96ba9f93fdd5576d9021a0b941be68eb52  
+* Re-doing the Landing page and several UI improvements to the app.
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/0e94264a6fc4825cc7eb61688b02de590b3685c0  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/f8be1d23d0c549ca5b2558568a4e3b407487cc92  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/5347b4a65a403e8ed43a91af34df7816c9da4799  
+
+* I am experienced in Front-End/UI aspects of Web Apps and took responsibility to complete those tasks (Majority of CSS work)  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commits/master/frontend/app/styles/dashboard.css  
+https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/blob/master/frontend/app/styles/main.css  
+
+* I could have implemented more interesting and unique functionalities had the requirements been more stringent.  
+Nonetheless, I am happy with the overall effort put in by the team.  
 
 
 ----
