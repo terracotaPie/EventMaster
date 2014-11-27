@@ -21,7 +21,21 @@ TODO: Fill in the report
 
 ## terracotaPie
 
-TODO: Fill in the report
+* From the commit/lines(contributions) graph you can see that we are competing for 1st place with cadz7. Some of the issues I personally resolved.
+    * [issue 68](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/issues/68)  
+    * [issue 67](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/issues/67)
+    * [issue 66](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/issues/66)
+    * [issue 65](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/issues/65)
+    * [issue 56](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/issues/56)
+    * [issue 36](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/issues/36)
+    * [issue 34](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/issues/34)
+    * [issue 10](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/issues/10)
+    * [issue 6](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/issues/6)
+    * [issue 3](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/issues/3)
+* My main contribution is coding calendar logic - features like filtering, putting subscriptions to calendar managing sidebar buttons and so on.
+
+* I think that me and cadz7 are most experienced front-end developers on the team. We made sure everyone on the team is familliar with the tools. And provided support for people who had troubles setting up development environment on their computers. I and Rick finalized on frameworks and tools we were going to use in phase 1 planning. I also can say that I was very communicative - i was available on slack almost all the time and didn't hesitate to meet up in person if anyone is having problems with the code.  
+* bad sides/mistakes: I was a bit impatient sometimes - and pushed code with some small bugs that are fixed with 1-2 lines of code.
 
 
 ----
