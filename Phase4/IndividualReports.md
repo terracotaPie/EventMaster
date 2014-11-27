@@ -1,26 +1,11 @@
 # Individual Reports
-
------
-
-## Name (GitHub username)
-
-Here is an example of a fake report, just to give you an idea of the format we are expecting.
-We would like you to be concise yet informative.
-
- * My most significant contrubution was the design and implementation of Component X (links to relevant and interesting source-files/commits/issues).
- * While working on our Android app (and then later in class), I learned about adapters (links to relevant and interesting source-files/commits/issues).
- * I am always helping my teammates - I am the most experienced coder on the team, and I helped other teammates set up their development environment, and get up to speed with the tools we've used (give examples of specific tools).
- * I could keep people more informed of what I am doing - I made a few large commits that conflicted with everybody else's code, and merging everything wasted a lot of our time.
-
-----
-
 ## MartinPetkov
 
  * My most significant contribution to the code has been the error handling code on the backend:
     https://github.com/MartinPetkov/Proj-Evening-Team12-repo/commit/7ea52f6fad46d0bb2b8c39a000bb2d6c91d2eddd
     https://github.com/MartinPetkov/Proj-Evening-Team12-repo/commit/adafddfdaa7d18a99a7e77648732650deac49404
     https://github.com/MartinPetkov/Proj-Evening-Team12-repo/commit/04f42cb69c03fb664e4d4341e35b1efd039192b5
- * I also contributed greatly to writing the [Product.md](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/9c2888e2164c5ae3f3f237e83a9f04202b812f81), [Process.md](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/b80f43e508a70a40991a44244e1e4024edab109d) and [Architecture.md](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/127cb91444524e18f35753be9830770636c79bfb) files
+ * I also contributed greatly to writing the [Product.md](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/9c2888e2164c5ae3f3f237e83a9f04202b812f81), [Process.md](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/b80f43e508a70a40991a44244e1e4024edab109d) and [Architecture.md](https://github.com/csc301-fall2014/Proj-Evening-Team12-repo/commit/1ee107aa97a1f9ed2b61034160e4846417c0e80a) files
  * During this project, I learned mainly how to write a backend in Python using Flask and how to interact using SQLAlchemy using the same. I also learned a lot more about the MVC pattern and how it gets used in practice, since our project followed it in a very typical fashion.
  * My main strengths as a team member are reliability and organization, as well as the willingness to learn new things. This project required me to learn and understand new technologies and concepts, and I tried to learn them on time.
  * My main weakness as a team member is lack of programming experience and lack of free time to program, as I wasn't able to dedicate enough time to the coding portion of the project, not as much as others have. This is somewhere I could improve, by spending more time on the coding.
