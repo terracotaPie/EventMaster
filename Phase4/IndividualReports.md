@@ -51,7 +51,8 @@ TODO: Fill in the report
 ## talesgames
 
 TODO: Fill in the report
-
+ * My most significant contrubution was the design the the front page of our web app in general
+ * While working on our web app, I learned about scrum, and tools like trello and slack (https://trello.com/) (https://slack.com/)
 
 ----
 
