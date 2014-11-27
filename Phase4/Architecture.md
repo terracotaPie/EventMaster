@@ -13,8 +13,8 @@
 Most of the interaction and behaviour that the user sees is handled by frontend code, and the backend is used only to store and retrieve information. When the user interacts with the website and requests certain events or adds events, the logic is handled entirely on the server, but anything related to the look of the website, or UX-related tasks are handled by the JavaScript code on the frontend.
 
 ## Two Significant Architecture Decisions
- 1. Making the project be a web app
+ 1. **Making the project be a web app**  
 We decided to make the project be a web app because several of our team member already had extensive experience making web apps before the project started, and we wanted to leverage that experience and knowledge. We also felt that we could create a more fully-featured and better-looking product that way that we would have been able to with a desktop application or a console application. Furthermore, this allows us to use the application and work on it from any computer and any location, as well as to be able to show it to others with minimal effort. We stil think that was a good decision to make, since it allowed us to use a great asset of our team members to its full potential, and for all the reasons listed above.
 
- 2. Using the MVC pattern for the whole project
+ 2. **Using the MVC pattern for the whole project**  
 We made the decision to build the app using the MVC pattern because it is extremely popular right now, and because it is a very good way to create a web application. It allowed us to separate the roles of team members appropriately and to focus on different aspects of the project separately, such as decoupling the logic from the look of the website. It also allowed us to reduce the complexity of the codebase and make it easier to understand and work on. We still believe that this was a good design decision, as we can't think of a different pattern that would have worked better in this particular case.
